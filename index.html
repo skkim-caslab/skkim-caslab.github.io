@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seulki Kim | Memory-Centric Architecture for LLMs</title>
+  <meta name="description" content="Seulki Kim is a Ph.D. student at DGIST designing memory-centric hardware, processing-in-memory and on-chip memory management, for efficient LLM inference and vector search (HPCA 2027, ISCA 2026).">
+  <link rel="canonical" href="https://skkim-caslab.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://skkim-caslab.github.io/">
+  <meta property="og:site_name" content="Seulki Kim">
+  <meta property="og:title" content="Seulki Kim | Memory-Centric Architecture for LLMs">
+  <meta property="og:description" content="Ph.D. student at DGIST building processing-in-memory and on-chip memory systems for LLM inference and vector search (HPCA 2027, ISCA 2026).">
+  <meta property="og:image" content="https://skkim-caslab.github.io/assets/images/profile.jpg">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Seulki Kim",
+    "alternateName": "김슬기",
+    "url": "https://skkim-caslab.github.io/",
+    "image": "https://skkim-caslab.github.io/assets/images/profile.jpg",
+    "email": "mailto:skkim@dgist.ac.kr",
+    "jobTitle": "Ph.D. Student",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "DGIST" },
+    "knowsAbout": ["Processing-in-Memory", "LLM inference", "Sparse LLM inference", "Approximate nearest neighbor search", "NPU", "On-chip memory management", "Computer architecture"],
+    "sameAs": ["https://github.com/skkim-caslab", "https://caslab-yonsei.github.io/members/seulki-kim/"]
+  }
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Seulki Kim</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#research">Research</a>
+      <a href="publications.html">Publications &amp; News</a>
+      <a href="#contact">Contact</a>
+      <!-- <a href="assets/cv/seulki-kim-cv.pdf">CV</a> -->
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="name">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Memory-centric architecture for LLM inference and vector search</p>
+        <h1 id="name">Seulki Kim<span class="name-ko" lang="ko">김슬기</span></h1>
+        <p class="hero-role">Ph.D. Student, DGIST · Member of <a href="https://caslab-yonsei.github.io/" target="_blank" rel="noopener">CASLAB@Yonsei</a></p>
+        <p class="lead">I design hardware that brings computation to where the data lives, making <span class="accent-pim">sparse LLMs run on processing-in-memory</span>, <span class="accent-search">vector search stream from DRAM banks</span>, and <span class="accent-device">on-device NPUs use every byte of on-chip memory</span>.</p>
+        <p class="intro-note">LLM decoding and billion-scale vector search are limited by memory bandwidth, not arithmetic. Compression and sparsity should cut that traffic, but their formats rarely match how memory hardware moves data. I co-design data layouts and the hardware that consumes them, so compressed and sparse data streams at full bandwidth.</p>
+        <div class="hero-highlights" aria-label="Recent selected publications">
+          <span class="hero-highlights-label">Recent work</span>
+          <a href="publications.html#unipim">UniPIM <span class="venue-inline">HPCA 2027</span></a>
+          <a href="publications.html#smooth">SMOOTH <span class="venue-inline">ISCA 2026</span></a>
+          <a href="publications.html#sanns">S-ANNS <span class="venue-inline">IEEE CAL 2026</span></a>
+          <a href="publications.html#blockpim">BlockPIM <span class="venue-inline">IEEE CAL 2026</span></a>
+        </div>
+        <ul class="signals" aria-label="Research areas">
+          <li><a class="signal t-pim" href="#focus-pim"><span class="signal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="10" rx="2"/><path d="M6 16v2M10 16v2M14 16v2M18 16v2M6 10h3v2H6zM15 10h3v2h-3z"/></svg></span>Processing-in-Memory for LLMs</a></li>
+          <li><a class="signal t-search" href="#focus-search"><span class="signal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/><circle cx="9" cy="10" r="1"/><circle cx="13" cy="12" r="1"/></svg></span>In-Memory Vector Search</a></li>
+          <li><a class="signal t-device" href="#focus-device"><span class="signal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><rect x="9" y="7" width="6" height="6" rx="1"/><path d="M11 18h2"/></svg></span>On-Device LLM Accelerators</a></li>
+          <li><a class="signal t-system" href="#focus-system"><span class="signal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/></svg></span>Efficient Datacenter Systems</a></li>
+        </ul>
+        <div class="link-row">
+          <a class="button primary" href="publications.html">Publications</a>
+          <!-- <a class="button" href="assets/cv/seulki-kim-cv.pdf">CV</a> -->
+          <span class="profile-links">
+            <a href="mailto:skkim@dgist.ac.kr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</a>
+            <a href="https://caslab-yonsei.github.io/members/seulki-kim/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>Lab profile</a>
+            <!-- <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a> -->
+            <a href="https://github.com/skkim-caslab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>
+            <!-- <a href="https://www.linkedin.com/in/YOUR_ID/" target="_blank" rel="noopener">LinkedIn</a> -->
+          </span>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/images/profile.jpg" alt="Seulki Kim" width="746" height="960">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="publications" aria-labelledby="publications-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="publications-title">Selected Publications</h2>
+        <a href="publications.html">Full list →</a>
+      </div>
+      <div class="cards">
+
+        <article class="card t-pim" id="card-unipim">
+          <button class="card-figure" type="button" aria-label="UniPIM overview" data-overview="unipim"><img src="assets/images/papers/unipim.svg" alt="Index-based sparse PIM gives each DRAM bank different work and large index metadata; UniPIM uses a small bitmap and 32-byte blocks with equal work per bank." width="760" height="400" loading="lazy"></button>
+          <div class="card-body">
+            <div class="badges"><span class="venue-badge">HPCA</span><span class="badge-year">2027, to appear</span><span class="role-badge">First author</span></div>
+            <h3 class="card-title">UniPIM</h3>
+            <p class="card-subtitle">Hardware-Aligned Sparse LLM Inference for All-Bank Processing-in-Memory</p>
+            <p class="card-teaser">Commercial PIM cannot skip zeros, so UniPIM makes sparsity look like the dense, bank-balanced work it already runs.</p>
+            <figure class="chart">
+              <figcaption>Decode throughput, up to</figcaption>
+              <div class="bar-row"><span class="bar-label">vs quantized dense PIM</span><span class="bar-track"><span class="bar-fill" style="--w:43%"></span></span><span class="bar-value">1.29×</span></div>
+              <div class="bar-row"><span class="bar-label">vs SparsePIM</span><span class="bar-track"><span class="bar-fill" style="--w:70%"></span></span><span class="bar-value">2.1×</span></div>
+              <div class="bar-row"><span class="bar-label">vs NPU</span><span class="bar-track"><span class="bar-fill" style="--w:90%"></span></span><span class="bar-value">2.7×</span></div>
+              <p class="chart-note">Up to 62% compression vs FP16 on OPT-6.7B · 7–23% lower energy than dense PIM</p>
+            </figure>
+            <ul class="tags"><li>Processing-in-Memory</li><li>Sparse LLM</li><li>KV Cache</li><li>RTL</li></ul>
+            <div class="actions">
+              <button class="toggle" type="button" data-overview="unipim">Overview</button>
+              <a href="https://caslab-yonsei.github.io/publications/hpca27-skim/" target="_blank" rel="noopener">Project</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card t-device" id="card-smooth">
+          <button class="card-figure" type="button" aria-label="SMOOTH overview" data-overview="smooth"><img src="assets/images/papers/smooth.svg" alt="Bandwidth timelines: static tiling leaves bandwidth idle during compute phases; SMOOTH preloads weights into the idle windows and finishes decoding earlier." width="760" height="400" loading="lazy"></button>
+          <div class="card-body">
+            <div class="badges"><span class="venue-badge">ISCA</span><span class="badge-year">2026</span><span class="role-badge">First author</span></div>
+            <h3 class="card-title">SMOOTH</h3>
+            <p class="card-subtitle">Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference</p>
+            <p class="card-teaser">Decoding leaves DRAM bandwidth idle in short bursts; SMOOTH fills them by managing the NPU scratchpad at runtime.</p>
+            <figure class="chart">
+              <figcaption>Reduction vs prior baselines, up to</figcaption>
+              <div class="bar-row"><span class="bar-label">Time-to-First-Token</span><span class="bar-track"><span class="bar-fill" style="--w:59.2%"></span></span><span class="bar-value">−59.2%</span></div>
+              <div class="bar-row"><span class="bar-label">Time-to-Last-Token</span><span class="bar-track"><span class="bar-fill" style="--w:73%"></span></span><span class="bar-value">−73.0%</span></div>
+              <div class="bar-row"><span class="bar-label">Energy (average)</span><span class="bar-track"><span class="bar-fill" style="--w:51.2%"></span></span><span class="bar-value">−51.2%</span></div>
+            </figure>
+            <ul class="tags"><li>NPU</li><li>On-Device LLM</li><li>Scratchpad Memory</li><li>Verilog</li></ul>
+            <div class="actions">
+              <button class="toggle" type="button" data-overview="smooth">Overview</button>
+              <a href="https://doi.org/10.1109/ISCA66397.2026.00057" target="_blank" rel="noopener">DOI</a>
+              <a href="https://caslab-yonsei.github.io/publications/isca26-skim/" target="_blank" rel="noopener">Project</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card t-search" id="card-sanns">
+          <button class="card-figure" type="button" aria-label="S-ANNS overview" data-overview="sanns"><img src="assets/images/papers/sanns.svg" alt="A float32 value multiplied in an FP32 MAC versus the same value stored as signed powers of two and computed with shifts and an adder." width="760" height="400" loading="lazy"></button>
+          <div class="card-body">
+            <div class="badges"><span class="venue-badge">IEEE CAL</span><span class="badge-year">2026</span><span class="role-badge">Co-first author</span></div>
+            <h3 class="card-title">S-ANNS</h3>
+            <p class="card-subtitle">Energy-Efficient Approximate Nearest Neighbor Search via Shift-Based PIM Architecture</p>
+            <p class="card-teaser">Database vectors never change, so S-ANNS does the multiplier's recoding offline and the PIM only shifts and adds.</p>
+            <p class="key-result">1.4–1.9× search throughput at 0.3–0.7× the memory footprint</p>
+            <figure class="chart">
+              <figcaption>Shift PE vs FP32 MAC, per dimension (S=2)</figcaption>
+              <div class="bar-row"><span class="bar-label">Area</span><span class="bar-track"><span class="bar-fill" style="--w:49.4%"></span></span><span class="bar-value">−49.4%</span></div>
+              <div class="bar-row"><span class="bar-label">Power</span><span class="bar-track"><span class="bar-fill" style="--w:58.9%"></span></span><span class="bar-value">−58.9%</span></div>
+            </figure>
+            <ul class="tags"><li>Vector Search</li><li>RAG</li><li>Processing-in-Memory</li><li>PoT Quantization</li></ul>
+            <div class="actions">
+              <button class="toggle" type="button" data-overview="sanns">Overview</button>
+              <a href="https://caslab-yonsei.github.io/publications/cal26-2-skim/" target="_blank" rel="noopener">Project</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card t-pim" id="card-blockpim">
+          <button class="card-figure" type="button" aria-label="BlockPIM overview" data-overview="blockpim"><img src="assets/images/papers/blockpim.svg" alt="Unstructured pruning with CSR indices versus BlockPIM's 32-byte block pruning with a one-bit-per-block bitmap feeding a dense MAC pipeline." width="760" height="400" loading="lazy"></button>
+          <div class="card-body">
+            <div class="badges"><span class="venue-badge">IEEE CAL</span><span class="badge-year">2026</span><span class="role-badge">First author</span></div>
+            <h3 class="card-title">BlockPIM</h3>
+            <p class="card-subtitle">Enabling Sparse LLM Inference on Dense PIM Architectures</p>
+            <p class="card-teaser">Pruning aligned to the PIM's 32-byte I/O lets sparse LLMs run on the dense pipeline with only a bitmap as metadata.</p>
+            <figure class="chart">
+              <figcaption>Speedup, up to</figcaption>
+              <div class="bar-row"><span class="bar-label">vs sparse PIM</span><span class="bar-track"><span class="bar-fill" style="--w:36%"></span></span><span class="bar-value">3.6×</span></div>
+              <div class="bar-row"><span class="bar-label">vs NPU</span><span class="bar-track"><span class="bar-fill" style="--w:80%"></span></span><span class="bar-value">8.0×</span></div>
+              <p class="chart-note">Up to 95.2% lower energy than the NPU</p>
+            </figure>
+            <ul class="tags"><li>Processing-in-Memory</li><li>Pruning</li><li>Sparse LLM</li></ul>
+            <div class="actions">
+              <button class="toggle" type="button" data-overview="blockpim">Overview</button>
+              <a href="https://caslab-yonsei.github.io/publications/cal26-skim/" target="_blank" rel="noopener">Project</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p class="results-note">HPCA and ISCA are top-tier conferences in computer architecture. Numbers are the headline results reported in each paper.</p>
+    </div>
+  </section>
+
+  <section class="section" id="research" aria-labelledby="research-title">
+    <div class="container home-grid">
+      <div class="main-col">
+        <h2 class="section-title" id="research-title">Research Focus</h2>
+        <div class="topic-list">
+          <article class="topic-item t-pim" id="focus-pim">
+            <h3>Processing-in-memory for sparse LLMs</h3>
+            <div>
+              <p class="topic-concept">Make sparsity something DRAM-bank hardware can actually use.</p>
+              <p class="topic-direction">Commercial bank-level PIM pairs a fixed-function MAC with each DRAM bank, but pruning rarely pays off there: index metadata can outweigh the savings, and the MACs cannot skip zeros. I align pruning with the PIM datapath, using bitmap-indexed contiguous blocks and all-bank-balanced pruning, so sparse weights and KV caches run on the dense pipeline.</p>
+              <p class="related-work"><a href="publications.html#blockpim">BlockPIM</a> · <a href="publications.html#unipim">UniPIM</a> · <a href="publications.html#ndpool">NDPool</a></p>
+            </div>
+          </article>
+          <article class="topic-item t-search" id="focus-search">
+            <h3>In-memory vector search</h3>
+            <div>
+              <p class="topic-concept">Choose a compression format the memory can stream.</p>
+              <p class="topic-direction">Approximate nearest neighbor search behind RAG and vector databases is bandwidth-bound at billion scale. Codebook compression needs lookup-table gathers that bank-level PIM serializes. I encode vectors so distance computation becomes streaming shift-and-add, and study cluster-aware hybrid in-memory execution for billion-scale search.</p>
+              <p class="related-work"><a href="publications.html#sanns">S-ANNS</a> · <a href="publications.html#cabin">CABIN</a></p>
+            </div>
+          </article>
+          <article class="topic-item t-device" id="focus-device">
+            <h3>On-device LLM accelerators</h3>
+            <div>
+              <p class="topic-concept">Manage on-chip memory at runtime, not only at compile time.</p>
+              <p class="topic-direction">Mobile NPUs have a few megabytes of SRAM and low-bandwidth LPDDR, while decoding alternates between compute- and I/O-bound phases. Static compiler tiling cannot follow this. I add lightweight hardware for fine-grained block allocation, preloading into idle bandwidth, and early reclamation.</p>
+              <p class="related-work"><a href="publications.html#smooth">SMOOTH</a></p>
+            </div>
+          </article>
+          <article class="topic-item t-system" id="focus-system">
+            <h3>Efficient datacenter systems</h3>
+            <div>
+              <p class="topic-concept">Carry the same efficiency goals up to the server.</p>
+              <p class="topic-direction">Beyond accelerators, I contribute to system work on shared execution for LLM inference on CXL near-data-processing systems, and on core management that saves energy for latency-critical cloud services.</p>
+              <p class="related-work"><a href="publications.html#ndpool">NDPool</a> · <a href="publications.html#ecocore">EcoCore</a></p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="stack-title">Across the stack</h3>
+        <ol class="layers" aria-label="Research stack, from workloads down to simulation">
+          <li class="layer" style="--depth:0"><strong class="layer-name">LLM &amp; retrieval workloads</strong><span class="layer-tools">PyTorch, Hugging Face, OPT / LLaMA / MoE, ANNS benchmarks</span><div class="layer-papers"><a class="pill t-pim" href="publications.html#unipim">UniPIM<small>HPCA 2027</small></a><a class="pill t-device" href="publications.html#smooth">SMOOTH<small>ISCA 2026</small></a><a class="pill t-search" href="publications.html#sanns">S-ANNS<small>CAL 2026</small></a></div></li>
+          <li class="layer" style="--depth:1"><strong class="layer-name">Compression &amp; data layout</strong><span class="layer-tools">Block pruning, bitmaps, Power-of-Two quantization</span><div class="layer-papers"><a class="pill t-pim" href="publications.html#blockpim">BlockPIM<small>CAL 2026</small></a><a class="pill t-pim" href="publications.html#unipim">UniPIM<small>HPCA 2027</small></a><a class="pill t-search" href="publications.html#sanns">S-ANNS<small>CAL 2026</small></a></div></li>
+          <li class="layer" style="--depth:2"><strong class="layer-name">PIM &amp; NPU microarchitecture</strong><span class="layer-tools">Verilog RTL, synthesis</span><div class="layer-papers"><a class="pill t-pim" href="publications.html#unipim">UniPIM<small>HPCA 2027</small></a><a class="pill t-device" href="publications.html#smooth">SMOOTH<small>ISCA 2026</small></a><a class="pill t-pim" href="publications.html#blockpim">BlockPIM<small>CAL 2026</small></a></div></li>
+          <li class="layer" style="--depth:3"><strong class="layer-name">Performance &amp; memory simulation</strong><span class="layer-tools">LLMCompass, ScaleSim, Ramulator</span><div class="layer-papers"><a class="pill t-device" href="publications.html#smooth">SMOOTH<small>ISCA 2026</small></a><a class="pill t-pim" href="publications.html#unipim">UniPIM<small>HPCA 2027</small></a><a class="pill t-search" href="publications.html#sanns">S-ANNS<small>CAL 2026</small></a></div></li>
+        </ol>
+      </div>
+
+      <aside class="side" aria-label="News, skills, and education">
+        <section class="side-section" id="news" aria-labelledby="news-title">
+          <h2 class="side-title" id="news-title">News</h2>
+          <div class="news-stream">
+            <div class="news-row"><span class="news-year">2026</span><p><a href="publications.html#unipim"><strong>UniPIM</strong></a> was accepted to <strong class="venue-inline">HPCA 2027</strong>.</p></div>
+            <div class="news-row"><span class="news-year">2026</span><p><a href="publications.html#sanns"><strong>S-ANNS</strong></a> (co-first author) was accepted to <strong class="venue-inline">IEEE CAL</strong>.</p></div>
+            <div class="news-row"><span class="news-year">2026</span><p><a href="publications.html#smooth"><strong>SMOOTH</strong></a> was accepted to <strong class="venue-inline">ISCA 2026</strong>.</p></div>
+            <div class="news-row"><span class="news-year">2026</span><p><a href="publications.html#blockpim"><strong>BlockPIM</strong></a> was accepted to <strong class="venue-inline">IEEE CAL</strong>.</p></div>
+            <div class="news-row"><span class="news-year">2026</span><p><a href="publications.html#cabin"><strong>CABIN</strong></a> and <a href="publications.html#ndpool"><strong>NDPool</strong></a> were accepted to <strong class="venue-inline">IEEE CAL</strong>.</p></div>
+            <div class="news-row"><span class="news-year">2025</span><p><a href="publications.html#ecocore"><strong>EcoCore</strong></a> was accepted to <strong class="venue-inline">MICRO 2025</strong>.</p></div>
+          </div>
+        </section>
+
+        <section class="side-section" id="skills" aria-labelledby="skills-title">
+          <h2 class="side-title" id="skills-title">Technical skills</h2>
+          <div class="skill-groups">
+            <div class="skill-group"><h3>Hardware design</h3><div class="expertise"><span>Verilog RTL</span><span>Logic Synthesis</span><span>PIM Architecture</span><span>NPU / Accelerator Design</span></div></div>
+            <div class="skill-group"><h3>Simulation</h3><div class="expertise"><span>LLMCompass</span><span>ScaleSim</span><span>Ramulator</span><span>Cycle-Accurate Modeling</span></div></div>
+            <div class="skill-group"><h3>ML workloads</h3><div class="expertise"><span>PyTorch</span><span>Hugging Face</span><span>LLM Pruning (SparseGPT, Wanda)</span><span>Quantization</span><span>ANNS / Vector DB</span></div></div>
+            <div class="skill-group"><h3>Languages</h3><div class="expertise"><span>Python</span><span>Verilog</span></div></div>
+          </div>
+        </section>
+
+        <section class="side-section" id="education" aria-labelledby="education-title">
+          <h2 class="side-title" id="education-title">Education</h2>
+          <div class="compact-education">
+            <div><span>2020 – Present</span><p><strong>M.S.–Ph.D. Integrated Course</strong><br>Electrical Engineering and Computer Science, DGIST<br>Advisor: Prof. Daehoon Kim</p></div>
+            <div><span>2016 – 2020</span><p><strong>B.S. in Convergence Engineering</strong><br>School of Basic Science, DGIST</p></div>
+            <div><span>Summer 2017</span><p><strong>Summer Session</strong><br>University of California, Berkeley</p></div>
+          </div>
+        </section>
+
+        <section class="side-section" id="experience" aria-labelledby="experience-title">
+          <h2 class="side-title" id="experience-title">Experience &amp; Awards</h2>
+          <div class="compact-education">
+            <div><span>2019</span><p><strong>Research Intern</strong>, Computer Architecture and Systems Lab (CASLAB), DGIST</p></div>
+            <div><span>2019</span><p><strong>Research Intern</strong>, Data Lab, DGIST</p></div>
+            <div><span>2019</span><p><strong>Intern</strong>, SYSOFT Co., Ltd.</p></div>
+            <div><span>2019</span><p>Academic Excellence Scholarship, DGIST</p></div>
+            <div><span>2018</span><p>International Student Creative Car Competition: Excellence Award (creative technology) and Bronze Prize (autonomous driving race)</p></div>
+            <div><span>2018</span><p>World Friends ICT Volunteer, Ghana</p></div>
+            <div><span>2017</span><p>Grand Prize, DGIST Technology Startup Competition</p></div>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact" aria-label="Contact">
+    <div class="container contact-line">
+      <div><span class="section-kicker">Contact</span><h2>skkim@dgist.ac.kr</h2></div>
+      <div class="contact-links">
+        <a class="button primary" href="mailto:skkim@dgist.ac.kr">Email</a>
+        <!-- <a class="button" href="assets/cv/seulki-kim-cv.pdf">CV</a> -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 Seulki Kim</span>
+    <span>Updated <time datetime="2026-11">November 2026</time></span>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
