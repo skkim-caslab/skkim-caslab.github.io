@@ -194,6 +194,7 @@ button { font: inherit; color: inherit; }
 .tl-row:first-child { padding-top: 0; }
 .tl-date { font: 500 12.5px/1.9 var(--mono); color: var(--faint); }
 .tl-row a { color: var(--ink); font-weight: 600; }
+.tl-row small a { color: inherit; font-weight: inherit; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 2px; }
 .tl-row strong { font-weight: 600; color: var(--ink); }
 .tl-row p small { display: block; color: var(--muted); font-size: 14px; }
 
