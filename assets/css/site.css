@@ -1,13 +1,14 @@
 /* Seulki Kim, personal site. Layout: sticky profile column + scrolling content. */
 :root {
-  --bg: #f7f6f2;
+  --bg: #ffffff;
   --surface: #ffffff;
+  --tint: #f6f7f9;
   --ink: #16171b;
   --text: #2d2f35;
   --muted: #5f626a;
   --faint: #8b8e96;
-  --line: #e3e0d8;
-  --line-strong: #cfcbc1;
+  --line: #e6e7eb;
+  --line-strong: #cfd2d8;
   --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --radius: 6px;
@@ -113,7 +114,7 @@ button { font: inherit; color: inherit; }
 .about-body + .about-body { margin-top: 12px; }
 .hl { background-image: linear-gradient(transparent 60%, var(--tc-soft) 60%); color: var(--ink); font-weight: 500; }
 
-.areas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 36px; border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+.areas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 36px; border: 1px solid var(--line); background: var(--tint); border-radius: var(--radius); overflow: hidden; }
 .area { padding: 16px 16px 18px; text-decoration: none; border-left: 1px solid var(--line); display: block; transition: background .2s; }
 .area:first-child { border-left: 0; }
 .area:hover { background: var(--tc-soft); }
@@ -164,7 +165,7 @@ button { font: inherit; color: inherit; }
 
 /* Research */
 .banks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.bank { background: var(--surface); padding: 22px 22px 24px; }
+.bank { background: var(--tint); padding: 22px 22px 24px; }
 .bank-tag { font: 500 11px var(--mono); color: var(--tc); letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
 .bank-tag::before { content: ""; width: 8px; height: 8px; background: var(--tc-fill); border-radius: 2px; }
 .bank h3 { margin-top: 10px; font-size: 18px; }
