@@ -1,2 +1,3 @@
 .DS_Store
 *.pdf
+!assets/cv/seulki-kim-cv.pdf
