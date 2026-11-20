@@ -75,6 +75,11 @@
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
   }
+  function tier(venue) {
+    if (/^(HPCA|ISCA|MICRO|ASPLOS)\b/.test(venue)) return '<span class="tier tier-top">Top-tier</span>';
+    if (/CAL\b/.test(venue)) return '<span class="tier tier-sci">SCI</span>';
+    return "";
+  }
   function openOverview(key, opener) {
     var p = PAPERS[key];
     if (!p) return;
@@ -92,7 +97,7 @@
     dialog.innerHTML =
       '<div class="overview-inner">' +
         '<div class="overview-head"><div>' +
-          '<p class="meta"><span class="venue">' + esc(p.venue) + "</span></p>" +
+          '<p class="meta"><span class="venue">' + esc(p.venue) + "</span>" + tier(p.venue) + "</p>" +
           '<h2 id="overview-title">' + esc(p.short) + "</h2>" +
         "</div>" +
         '<button class="overview-close" type="button" aria-label="Close">×</button></div>' +
