@@ -59,7 +59,13 @@
   if (navLinks.length && "IntersectionObserver" in window) {
     var byId = {};
     navLinks.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+    var atBottom = function () { return window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4; };
+    var markLast = function () {
+      navLinks.forEach(function (a) { a.classList.remove("is-active"); });
+      navLinks[navLinks.length - 1].classList.add("is-active");
+    };
     var spy = new IntersectionObserver(function (entries) {
+      if (atBottom()) return markLast();
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;
         navLinks.forEach(function (a) { a.classList.remove("is-active"); });
@@ -68,6 +74,8 @@
       });
     }, { rootMargin: "-30% 0px -60% 0px" });
     Object.keys(byId).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+    // The last section is too short to reach the spy band, so mark it at the page bottom.
+    window.addEventListener("scroll", function () { if (atBottom()) markLast(); }, { passive: true });
   }
 
   // Overview dialog.
