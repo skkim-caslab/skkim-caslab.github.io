@@ -139,14 +139,6 @@ button { font: inherit; color: inherit; }
 .bank-papers a { color: var(--ink); }
 
 
-/* News & timeline */
-.timeline { display: grid; }
-.tl-row { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 18px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
-.tl-row:first-child { padding-top: 0; }
-.tl-date { font: 500 12.5px/1.9 var(--mono); color: var(--faint); }
-.tl-row a { color: var(--ink); font-weight: 600; text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); }
-.tl-row strong { font-weight: 600; color: var(--ink); }
-.tl-row p small { display: block; color: var(--muted); font-size: 14px; }
 
 .sub-head { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
 .sub-head-gap { margin-top: 22px; }
