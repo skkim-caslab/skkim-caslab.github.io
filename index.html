@@ -44,8 +44,8 @@
     </div>
     <nav class="profile-nav" aria-label="Sections">
       <a href="#about"><span>01</span>About</a>
-      <a href="#work"><span>02</span>Selected work</a>
-      <a href="#research"><span>03</span>Research</a>
+      <a href="#research"><span>02</span>Research</a>
+      <a href="#work"><span>03</span>Selected work</a>
       <a href="#news"><span>04</span>News</a>
       <a href="#background"><span>05</span>Background</a>
       <a href="#contact"><span>06</span>Contact</a>
@@ -68,23 +68,40 @@
       <p class="about-statement">I design hardware that brings computation to where the data lives.</p>
       <p class="about-body">My work makes <span class="hl t-pim">sparse LLMs run on processing-in-memory</span>, lets <span class="hl t-search">vector search stream from DRAM banks</span>, and helps <span class="hl t-device">on-device NPUs use every byte of on-chip memory</span>.</p>
       <p class="about-body">LLM decoding and billion-scale vector search are limited by memory bandwidth, not arithmetic. Compression and sparsity should cut that traffic, but their formats rarely match how memory hardware moves data. I co-design data layouts and the hardware that consumes them, so compressed and sparse data streams at full bandwidth.</p>
-      <div class="areas" role="list" aria-label="Research areas">
-        <a class="area t-pim" role="listitem" href="#focus-pim"><span class="area-label">PIM</span><span class="area-name">Processing-in-Memory for LLMs</span></a>
-        <a class="area t-search" role="listitem" href="#focus-search"><span class="area-label">Search</span><span class="area-name">In-Memory Vector Search</span></a>
-        <a class="area t-device" role="listitem" href="#focus-device"><span class="area-label">Device</span><span class="area-name">On-Device LLM Accelerators</span></a>
-        <a class="area t-system" role="listitem" href="#focus-system"><span class="area-label">System</span><span class="area-name">Efficient Datacenter Systems</span></a>
-      </div>
-      <div class="recent" aria-label="Recent work">
-        <span class="recent-label">Recent</span>
-        <a href="#work-unipim">UniPIM<small>HPCA 2027</small></a>
-        <a href="#work-smooth">SMOOTH<small>ISCA 2026</small></a>
-        <a href="#work-sanns">S-ANNS<small>CAL 2026</small></a>
-        <a href="#work-blockpim">BlockPIM<small>CAL 2026</small></a>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-h">
+      <div class="sec-head"><span class="sec-num">02</span><h2 id="research-h">Research</h2></div>
+      <div class="threads">
+        <article class="thread t-pim" id="focus-pim">
+          <p class="bank-tag">PIM</p>
+          <h3>Processing-in-memory for sparse LLMs</h3>
+          <p>Align pruning with the bank-level PIM datapath so sparse weights and KV caches run on the dense pipeline.</p>
+          <p class="bank-papers"><a href="#work-unipim">UniPIM</a> · <a href="#work-blockpim">BlockPIM</a> · <a href="publications.html#ndpool">NDPool</a></p>
+        </article>
+        <article class="thread t-search" id="focus-search">
+          <p class="bank-tag">Search</p>
+          <h3>In-memory vector search</h3>
+          <p>Encode vectors so nearest-neighbor search becomes shift-and-add streamed from DRAM banks, at billion scale.</p>
+          <p class="bank-papers"><a href="#work-sanns">S-ANNS</a> · <a href="publications.html#cabin">CABIN</a></p>
+        </article>
+        <article class="thread t-device" id="focus-device">
+          <p class="bank-tag">Device</p>
+          <h3>On-device LLM accelerators</h3>
+          <p>Manage the NPU scratchpad at runtime to fill idle memory bandwidth during on-device decoding.</p>
+          <p class="bank-papers"><a href="#work-smooth">SMOOTH</a></p>
+        </article>
+        <article class="thread t-system" id="focus-system">
+          <p class="bank-tag">System</p>
+          <h3>Efficient datacenter systems</h3>
+          <p>Shared LLM inference on CXL near-data processing, and energy-aware core management for cloud services.</p>
+          <p class="bank-papers"><a href="publications.html#ndpool">NDPool</a> · <a href="publications.html#ecocore">EcoCore</a></p>
+        </article>
       </div>
     </section>
 
     <section class="section" id="work" aria-labelledby="work-h">
-      <div class="sec-head"><span class="sec-num">02</span><h2 id="work-h">Selected work</h2><a class="more" href="publications.html">All publications →</a></div>
+      <div class="sec-head"><span class="sec-num">03</span><h2 id="work-h">Selected work</h2><a class="more" href="publications.html">All publications →</a></div>
       <div class="works">
       <article class="work t-pim" id="work-unipim">
         <button class="work-figure" type="button" aria-label="UniPIM overview" data-overview="unipim"><img src="assets/images/papers/unipim.svg" alt="Index-based sparse PIM gives each DRAM bank different work and large index metadata; UniPIM uses a small bitmap and 32-byte blocks with equal work per bank." width="760" height="400" loading="lazy"></button>
@@ -94,10 +111,8 @@
           <p class="work-sub">Hardware-Aligned Sparse LLM Inference for All-Bank Processing-in-Memory</p>
           <p class="work-teaser">Commercial PIM cannot skip zeros, so UniPIM makes sparsity look like the dense, bank-balanced work it already runs.</p>
           <div class="stats"><div class="stat"><b>1.29×</b><span>decode throughput vs quantized dense PIM</span></div><div class="stat"><b>2.1×</b><span>vs SparsePIM</span></div><div class="stat"><b>2.7×</b><span>vs NPU</span></div></div>
-          <p class="stat-note">Up to 62% compression vs FP16 on OPT-6.7B · 7–23% lower energy than dense PIM</p>
           <div class="work-foot">
             <div class="links"><button class="primary-link" type="button" data-overview="unipim">Overview</button><a href="https://caslab-yonsei.github.io/publications/hpca27-skim/" target="_blank" rel="noopener">Project</a></div>
-            <ul class="tags"><li>Processing-in-Memory</li><li>Sparse LLM</li><li>KV Cache</li><li>RTL</li></ul>
           </div>
         </div>
       </article>
@@ -109,10 +124,8 @@
           <p class="work-sub">Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference</p>
           <p class="work-teaser">Decoding leaves DRAM bandwidth idle in short bursts; SMOOTH fills them by managing the NPU scratchpad at runtime.</p>
           <div class="stats"><div class="stat"><b>−59.2%</b><span>Time-to-First-Token</span></div><div class="stat"><b>−73.0%</b><span>Time-to-Last-Token</span></div><div class="stat"><b>−51.2%</b><span>energy (average)</span></div></div>
-          <p class="stat-note">Best-case reductions vs prior baselines on memory-constrained mobile SoCs</p>
           <div class="work-foot">
             <div class="links"><button class="primary-link" type="button" data-overview="smooth">Overview</button><a href="https://doi.org/10.1109/ISCA66397.2026.00057" target="_blank" rel="noopener">DOI</a><a href="https://caslab-yonsei.github.io/publications/isca26-skim/" target="_blank" rel="noopener">Project</a></div>
-            <ul class="tags"><li>NPU</li><li>On-Device LLM</li><li>Scratchpad Memory</li><li>Verilog</li></ul>
           </div>
         </div>
       </article>
@@ -126,7 +139,6 @@
           <div class="stats"><div class="stat"><b>1.4–1.9×</b><span>search throughput at 0.3–0.7× footprint</span></div><div class="stat"><b>−49.4%</b><span>PE area vs FP32 MAC</span></div><div class="stat"><b>−58.9%</b><span>PE power vs FP32 MAC</span></div></div>
           <div class="work-foot">
             <div class="links"><button class="primary-link" type="button" data-overview="sanns">Overview</button><a href="https://caslab-yonsei.github.io/publications/cal26-2-skim/" target="_blank" rel="noopener">Project</a></div>
-            <ul class="tags"><li>Vector Search</li><li>RAG</li><li>Processing-in-Memory</li><li>PoT Quantization</li></ul>
           </div>
         </div>
       </article>
@@ -140,59 +152,13 @@
           <div class="stats"><div class="stat"><b>3.6×</b><span>speedup vs sparse PIM</span></div><div class="stat"><b>8.0×</b><span>speedup vs NPU</span></div><div class="stat"><b>−95.2%</b><span>energy vs NPU</span></div></div>
           <div class="work-foot">
             <div class="links"><button class="primary-link" type="button" data-overview="blockpim">Overview</button><a href="https://caslab-yonsei.github.io/publications/cal26-skim/" target="_blank" rel="noopener">Project</a></div>
-            <ul class="tags"><li>Processing-in-Memory</li><li>Pruning</li><li>Sparse LLM</li></ul>
           </div>
         </div>
       </article>
       </div>
-      <p class="footnote">Numbers are the headline results reported in each paper. Click a figure for the full overview.</p>
+      <p class="footnote">Headline results from each paper. Click a figure for the full overview.</p>
     </section>
 
-    <section class="section" id="research" aria-labelledby="research-h">
-      <div class="sec-head"><span class="sec-num">03</span><h2 id="research-h">Research</h2></div>
-      <div class="banks">
-        <article class="bank t-pim" id="focus-pim">
-          <p class="bank-tag">Bank 0 · PIM</p>
-          <h3>Processing-in-memory for sparse LLMs</h3>
-          <p class="bank-concept">Make sparsity something DRAM-bank hardware can actually use.</p>
-          <p class="bank-text">Commercial bank-level PIM pairs a fixed-function MAC with each DRAM bank, but pruning rarely pays off there: index metadata can outweigh the savings, and the MACs cannot skip zeros. I align pruning with the PIM datapath, using bitmap-indexed contiguous blocks and all-bank-balanced pruning, so sparse weights and KV caches run on the dense pipeline.</p>
-          <p class="bank-papers"><a href="publications.html#blockpim">BlockPIM</a> · <a href="publications.html#unipim">UniPIM</a> · <a href="publications.html#ndpool">NDPool</a></p>
-        </article>
-        <article class="bank t-search" id="focus-search">
-          <p class="bank-tag">Bank 1 · Search</p>
-          <h3>In-memory vector search</h3>
-          <p class="bank-concept">Choose a compression format the memory can stream.</p>
-          <p class="bank-text">Approximate nearest neighbor search behind RAG and vector databases is bandwidth-bound at billion scale. Codebook compression needs lookup-table gathers that bank-level PIM serializes. I encode vectors so distance computation becomes streaming shift-and-add, and study cluster-aware hybrid in-memory execution for billion-scale search.</p>
-          <p class="bank-papers"><a href="publications.html#sanns">S-ANNS</a> · <a href="publications.html#cabin">CABIN</a></p>
-        </article>
-        <article class="bank t-device" id="focus-device">
-          <p class="bank-tag">Bank 2 · Device</p>
-          <h3>On-device LLM accelerators</h3>
-          <p class="bank-concept">Manage on-chip memory at runtime, not only at compile time.</p>
-          <p class="bank-text">Mobile NPUs have a few megabytes of SRAM and low-bandwidth LPDDR, while decoding alternates between compute- and I/O-bound phases. Static compiler tiling cannot follow this. I add lightweight hardware for fine-grained block allocation, preloading into idle bandwidth, and early reclamation.</p>
-          <p class="bank-papers"><a href="publications.html#smooth">SMOOTH</a></p>
-        </article>
-        <article class="bank t-system" id="focus-system">
-          <p class="bank-tag">Bank 3 · System</p>
-          <h3>Efficient datacenter systems</h3>
-          <p class="bank-concept">Carry the same efficiency goals up to the server.</p>
-          <p class="bank-text">Beyond accelerators, I contribute to system work on shared execution for LLM inference on CXL near-data-processing systems, and on core management that saves energy for latency-critical cloud services.</p>
-          <p class="bank-papers"><a href="publications.html#ndpool">NDPool</a> · <a href="publications.html#ecocore">EcoCore</a></p>
-        </article>
-      </div>
-
-      <div class="stack">
-        <h3>Across the stack</h3>
-        <table class="stack-table">
-          <tbody>
-            <tr><th scope="row">LLM &amp; retrieval workloads</th><td>PyTorch, Hugging Face, OPT / LLaMA / MoE, ANNS benchmarks</td><td><a href="#work-unipim">UniPIM</a> · <a href="#work-smooth">SMOOTH</a> · <a href="#work-sanns">S-ANNS</a></td></tr>
-            <tr><th scope="row">Compression &amp; data layout</th><td>Block pruning, bitmaps, Power-of-Two quantization</td><td><a href="#work-blockpim">BlockPIM</a> · <a href="#work-unipim">UniPIM</a> · <a href="#work-sanns">S-ANNS</a></td></tr>
-            <tr><th scope="row">PIM &amp; NPU microarchitecture</th><td>Verilog RTL, synthesis</td><td><a href="#work-unipim">UniPIM</a> · <a href="#work-smooth">SMOOTH</a> · <a href="#work-blockpim">BlockPIM</a></td></tr>
-            <tr><th scope="row">Performance &amp; memory simulation</th><td>LLMCompass, ScaleSim, Ramulator</td><td><a href="#work-smooth">SMOOTH</a> · <a href="#work-unipim">UniPIM</a> · <a href="#work-sanns">S-ANNS</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
 
     <section class="section" id="news" aria-labelledby="news-h">
       <div class="sec-head"><span class="sec-num">04</span><h2 id="news-h">News</h2></div>
@@ -208,49 +174,43 @@
 
     <section class="section" id="background" aria-labelledby="bg-h">
       <div class="sec-head"><span class="sec-num">05</span><h2 id="bg-h">Background</h2></div>
-      <div class="cols">
-        <div>
-          <h3 class="sub-head">Education</h3>
-          <div class="timeline">
-            <div class="tl-row"><span class="tl-date">2020 – now</span><p><strong>M.S.–Ph.D. Integrated Course</strong><small>Electrical Engineering and Computer Science, DGIST · Advisor: Prof. Daehoon Kim</small></p></div>
-            <div class="tl-row"><span class="tl-date">2016 – 2020</span><p><strong>B.S. in Convergence Engineering</strong><small>School of Undergraduate Studies, DGIST</small></p></div>
-            <div class="tl-row"><span class="tl-date">2017</span><p><strong>Summer Session</strong><small>University of California, Berkeley</small></p></div>
-          </div>
-          <h3 class="sub-head sub-head-gap">Teaching</h3>
-          <div class="timeline">
-            <div class="tl-row"><span class="tl-date">Fall 2022</span><p><strong>Teaching Assistant</strong><small>Advanced Computer Architecture, DGIST</small></p></div>
-            <div class="tl-row"><span class="tl-date">Fall 2020</span><p><strong>Teaching Assistant</strong><small>Multivariable Calculus, DGIST</small></p></div>
-          </div>
-          <h3 class="sub-head sub-head-gap">Patents</h3>
-          <div class="timeline">
-            <div class="tl-row"><span class="tl-date">2025</span><p><strong>Electronic Device and Control Method Thereof</strong><small>Bokyeong Kim, Daehoon Kim, Seulki Kim · KR Patent Application 10-2025-0032138 (filed Mar 2025) · Samsung Electronics &amp; DGIST</small></p></div>
-          </div>
-          <h3 class="sub-head sub-head-gap">Service</h3>
-          <div class="timeline">
-            <div class="tl-row"><span class="tl-date">2026</span><p><strong>Reviewer</strong><small>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</small></p></div>
-          </div>
-        </div>
-        <div>
-          <h3 class="sub-head">Experience</h3>
-          <div class="timeline">
-            <div class="tl-row"><span class="tl-date">2020 – now</span><p><strong>Graduate Researcher, CASLAB</strong><small>Yonsei University, Seoul (Sep 2024 – present) · DGIST, Daegu (Mar 2020 – Aug 2024)</small></p></div>
-            <div class="tl-row"><span class="tl-date">2022</span><p><strong>Cloud Architect Intern</strong><small>LG CNS · Jul – Aug 2022</small></p></div>
-            <div class="tl-row"><span class="tl-date">2019</span><p><strong>Undergraduate Group Research Program (UGRP)</strong><small>Personalized AI for improving computer work efficiency · DGIST, with Prof. Min-Soo Kim</small></p></div>
-            <div class="tl-row"><span class="tl-date">2019</span><p><strong>Research Intern</strong><small>Computer Architecture and Systems Lab (CASLAB), DGIST</small></p></div>
-            <div class="tl-row"><span class="tl-date">2019</span><p><strong>Research Intern</strong><small>Data-Intensive Computing Systems Laboratory (Data Lab), DGIST</small></p></div>
-            <div class="tl-row"><span class="tl-date">2019</span><p><strong>Industry Intern</strong><small>SYSOFT Co., Ltd. · Company-University Cooperation (CUop) Program</small></p></div>
-            <div class="tl-row"><span class="tl-date">2018</span><p>World Friends ICT Volunteer, Ghana</p></div>
-          </div>
-          <h3 class="sub-head sub-head-gap">Honors &amp; Funding</h3>
-          <div class="timeline">
-            <div class="tl-row"><span class="tl-date">2020 – 2025</span><p><strong>DGIST Presidential Fellowship (DPF)</strong><small>Graduate fellowship, DGIST · Mar 2020 – Feb 2025</small></p></div>
-            <div class="tl-row"><span class="tl-date">2020 – now</span><p><strong>Government Scholarship (Graduate)</strong><small>DGIST</small></p></div>
-            <div class="tl-row"><span class="tl-date">2016 – 2020</span><p><strong>Government Scholarship (Undergraduate)</strong><small>DGIST</small></p></div>
-            <div class="tl-row"><span class="tl-date">2019</span><p><strong>Academic Excellence Scholarship</strong><small>DGIST</small></p></div>
-            <div class="tl-row"><span class="tl-date">2018</span><p><strong>International Student Creative Car Competition</strong><small>Excellence Award (creative technology) · Bronze Prize (autonomous driving race)</small></p></div>
-            <div class="tl-row"><span class="tl-date">2017</span><p><strong>Grand Prize</strong><small>DGIST Technology Startup Competition</small></p></div>
-          </div>
-        </div>
+      <h3 class="sub-head">Education</h3>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-date">2020 – now</span><p><strong>M.S.–Ph.D. Integrated Course</strong><small>Electrical Engineering and Computer Science, DGIST · Advisor: Prof. Daehoon Kim</small></p></div>
+        <div class="tl-row"><span class="tl-date">2016 – 2020</span><p><strong>B.S. in Convergence Engineering</strong><small>School of Undergraduate Studies, DGIST</small></p></div>
+        <div class="tl-row"><span class="tl-date">2017</span><p><strong>Summer Session</strong><small>University of California, Berkeley</small></p></div>
+      </div>
+      <h3 class="sub-head sub-head-gap">Experience</h3>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-date">2020 – now</span><p><strong>Graduate Researcher, CASLAB</strong><small>Yonsei University, Seoul (Sep 2024 – present) · DGIST, Daegu (Mar 2020 – Aug 2024)</small></p></div>
+        <div class="tl-row"><span class="tl-date">2022</span><p><strong>Cloud Architect Intern</strong><small>LG CNS · Jul – Aug 2022</small></p></div>
+        <div class="tl-row"><span class="tl-date">2019</span><p><strong>Undergraduate Group Research Program (UGRP)</strong><small>Personalized AI for improving computer work efficiency · DGIST, with Prof. Min-Soo Kim</small></p></div>
+        <div class="tl-row"><span class="tl-date">2019</span><p><strong>Research Intern</strong><small>Computer Architecture and Systems Lab (CASLAB), DGIST</small></p></div>
+        <div class="tl-row"><span class="tl-date">2019</span><p><strong>Research Intern</strong><small>Data-Intensive Computing Systems Laboratory (Data Lab), DGIST</small></p></div>
+        <div class="tl-row"><span class="tl-date">2019</span><p><strong>Industry Intern</strong><small>SYSOFT Co., Ltd. · Company-University Cooperation (CUop) Program</small></p></div>
+        <div class="tl-row"><span class="tl-date">2018</span><p>World Friends ICT Volunteer, Ghana</p></div>
+      </div>
+      <h3 class="sub-head sub-head-gap">Honors &amp; Funding</h3>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-date">2020 – 2025</span><p><strong>DGIST Presidential Fellowship (DPF)</strong><small>Graduate fellowship, DGIST · Mar 2020 – Feb 2025</small></p></div>
+        <div class="tl-row"><span class="tl-date">2020 – now</span><p><strong>Government Scholarship (Graduate)</strong><small>DGIST</small></p></div>
+        <div class="tl-row"><span class="tl-date">2016 – 2020</span><p><strong>Government Scholarship (Undergraduate)</strong><small>DGIST</small></p></div>
+        <div class="tl-row"><span class="tl-date">2019</span><p><strong>Academic Excellence Scholarship</strong><small>DGIST</small></p></div>
+        <div class="tl-row"><span class="tl-date">2018</span><p><strong>International Student Creative Car Competition</strong><small>Excellence Award (creative technology) · Bronze Prize (autonomous driving race)</small></p></div>
+        <div class="tl-row"><span class="tl-date">2017</span><p><strong>Grand Prize</strong><small>DGIST Technology Startup Competition</small></p></div>
+      </div>
+      <h3 class="sub-head sub-head-gap">Patents</h3>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-date">2025</span><p><strong>Electronic Device and Control Method Thereof</strong><small>Bokyeong Kim, Daehoon Kim, Seulki Kim · KR Patent Application 10-2025-0032138 (filed Mar 2025) · Samsung Electronics &amp; DGIST</small></p></div>
+      </div>
+      <h3 class="sub-head sub-head-gap">Teaching</h3>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-date">Fall 2022</span><p><strong>Teaching Assistant</strong><small>Advanced Computer Architecture, DGIST</small></p></div>
+        <div class="tl-row"><span class="tl-date">Fall 2020</span><p><strong>Teaching Assistant</strong><small>Multivariable Calculus, DGIST</small></p></div>
+      </div>
+      <h3 class="sub-head sub-head-gap">Service</h3>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-date">2026</span><p><strong>Reviewer</strong><small>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</small></p></div>
       </div>
       <div class="skills">
         <h3 class="sub-head">Technical skills</h3>
