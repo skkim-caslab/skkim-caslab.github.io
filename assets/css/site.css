@@ -122,6 +122,15 @@ button { font: inherit; color: inherit; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; color: var(--muted); }
 .tags li { border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; background: var(--tint); }
 .footnote { margin-top: 18px; font-size: 13px; color: var(--faint); }
+.plist-head { margin-top: 34px; }
+.plist { display: grid; gap: 14px; }
+.plist-title { font-size: 15.5px; font-weight: 600; color: var(--ink); line-height: 1.45; }
+.plist-link { font-size: 13.5px; font-weight: 500; color: var(--accent-ink); text-decoration: none; white-space: nowrap; }
+.plist-link:hover { text-decoration: underline; }
+.plist-authors { font-size: 14.5px; margin-top: 1px; }
+.plist-authors .note { color: var(--muted); font-size: 13px; }
+.plist-venue { font-size: 14.5px; color: var(--muted); }
+.plist .tier { margin-left: 6px; vertical-align: 1px; }
 
 /* Research */
 .bank-tag { font: 500 11px var(--mono); color: var(--tc); letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
