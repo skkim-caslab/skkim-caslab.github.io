@@ -33,7 +33,72 @@
 <main class="content" id="main">
     <section class="section page-top" aria-labelledby="page-h">
       <h1 class="page-title" id="page-h">Publications</h1>
-      <p class="page-intro">Processing-in-memory, on-device LLM accelerators, in-memory vector search, and efficient datacenter systems. Click a title for an overview.</p>
+      <p class="page-intro">Processing-in-memory, on-device LLM accelerators, in-memory vector search, and efficient datacenter systems. Selected work first, then every paper. Click a figure or title for an overview.</p>
+    </section>
+
+    <section class="section" id="selected" aria-labelledby="selected-h">
+      <div class="sec-head"><h2 id="selected-h">Selected work</h2></div>
+      <div class="works">
+      <article class="work t-pim" id="work-unipim">
+        <button class="work-figure" type="button" aria-label="UniPIM overview" data-overview="unipim"><img src="assets/images/papers/unipim.svg" alt="Index-based sparse PIM gives each DRAM bank different work and large index metadata; UniPIM uses a small bitmap and 32-byte blocks with equal work per bank." width="760" height="400" loading="lazy"></button>
+        <div>
+          <p class="meta"><span class="venue">HPCA</span><span class="tier tier-top">Top-tier</span><span>2027 · to appear</span><span>First author</span></p>
+          <h3 class="work-title">UniPIM</h3>
+          <p class="work-sub">Hardware-Aligned Sparse LLM Inference for All-Bank Processing-in-Memory</p>
+          <p class="work-teaser">Commercial PIM cannot skip zeros, so UniPIM makes sparsity look like the dense, bank-balanced work it already runs.</p>
+          <div class="stats"><div class="stat"><b>1.29×</b><span>decode throughput vs quantized dense PIM</span></div><div class="stat"><b>2.1×</b><span>vs SparsePIM</span></div><div class="stat"><b>2.7×</b><span>vs NPU</span></div></div>
+          <p class="stat-note">Up to 62% compression vs FP16 on OPT-6.7B · 7–23% lower energy than dense PIM</p>
+          <div class="work-foot">
+            <div class="links"><button class="primary-link" type="button" data-overview="unipim">Overview</button><a href="https://caslab-yonsei.github.io/publications/hpca27-skim/" target="_blank" rel="noopener">Project</a></div>
+            <ul class="tags"><li>Processing-in-Memory</li><li>Sparse LLM</li><li>KV Cache</li><li>RTL</li></ul>
+          </div>
+        </div>
+      </article>
+      <article class="work t-device" id="work-smooth">
+        <button class="work-figure" type="button" aria-label="SMOOTH overview" data-overview="smooth"><img src="assets/images/papers/smooth.svg" alt="Bandwidth timelines: static tiling leaves bandwidth idle during compute phases; SMOOTH preloads weights into the idle windows and finishes decoding earlier." width="760" height="400" loading="lazy"></button>
+        <div>
+          <p class="meta"><span class="venue">ISCA</span><span class="tier tier-top">Top-tier</span><span>2026</span><span>First author</span></p>
+          <h3 class="work-title">SMOOTH</h3>
+          <p class="work-sub">Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference</p>
+          <p class="work-teaser">Decoding leaves DRAM bandwidth idle in short bursts; SMOOTH fills them by managing the NPU scratchpad at runtime.</p>
+          <div class="stats"><div class="stat"><b>−59.2%</b><span>Time-to-First-Token</span></div><div class="stat"><b>−73.0%</b><span>Time-to-Last-Token</span></div><div class="stat"><b>−51.2%</b><span>energy (average)</span></div></div>
+          <p class="stat-note">Best-case reductions vs prior baselines on memory-constrained mobile SoCs</p>
+          <div class="work-foot">
+            <div class="links"><button class="primary-link" type="button" data-overview="smooth">Overview</button><a href="https://doi.org/10.1109/ISCA66397.2026.00057" target="_blank" rel="noopener">DOI</a><a href="https://caslab-yonsei.github.io/publications/isca26-skim/" target="_blank" rel="noopener">Project</a></div>
+            <ul class="tags"><li>NPU</li><li>On-Device LLM</li><li>Scratchpad Memory</li><li>Verilog</li></ul>
+          </div>
+        </div>
+      </article>
+      <article class="work t-search" id="work-sanns">
+        <button class="work-figure" type="button" aria-label="S-ANNS overview" data-overview="sanns"><img src="assets/images/papers/sanns.svg" alt="A float32 value multiplied in an FP32 MAC versus the same value stored as signed powers of two and computed with shifts and an adder." width="760" height="400" loading="lazy"></button>
+        <div>
+          <p class="meta"><span class="venue">IEEE CAL</span><span class="tier tier-sci">SCI</span><span>2026</span><span>Co-first author</span></p>
+          <h3 class="work-title">S-ANNS</h3>
+          <p class="work-sub">Energy-Efficient Approximate Nearest Neighbor Search via Shift-Based PIM Architecture</p>
+          <p class="work-teaser">Database vectors never change, so S-ANNS does the multiplier’s recoding offline and the PIM only shifts and adds.</p>
+          <div class="stats"><div class="stat"><b>1.4–1.9×</b><span>search throughput at 0.3–0.7× footprint</span></div><div class="stat"><b>−49.4%</b><span>PE area vs FP32 MAC</span></div><div class="stat"><b>−58.9%</b><span>PE power vs FP32 MAC</span></div></div>
+          <div class="work-foot">
+            <div class="links"><button class="primary-link" type="button" data-overview="sanns">Overview</button><a href="https://caslab-yonsei.github.io/publications/cal26-2-skim/" target="_blank" rel="noopener">Project</a></div>
+            <ul class="tags"><li>Vector Search</li><li>RAG</li><li>Processing-in-Memory</li><li>PoT Quantization</li></ul>
+          </div>
+        </div>
+      </article>
+      <article class="work t-pim" id="work-blockpim">
+        <button class="work-figure" type="button" aria-label="BlockPIM overview" data-overview="blockpim"><img src="assets/images/papers/blockpim.svg" alt="Unstructured pruning with CSR indices versus BlockPIM's 32-byte block pruning with a one-bit-per-block bitmap feeding a dense MAC pipeline." width="760" height="400" loading="lazy"></button>
+        <div>
+          <p class="meta"><span class="venue">IEEE CAL</span><span class="tier tier-sci">SCI</span><span>2026</span><span>First author</span></p>
+          <h3 class="work-title">BlockPIM</h3>
+          <p class="work-sub">Enabling Sparse LLM Inference on Dense PIM Architectures</p>
+          <p class="work-teaser">Pruning aligned to the PIM’s 32-byte I/O lets sparse LLMs run on the dense pipeline with only a bitmap as metadata.</p>
+          <div class="stats"><div class="stat"><b>3.6×</b><span>speedup vs sparse PIM</span></div><div class="stat"><b>8.0×</b><span>speedup vs NPU</span></div><div class="stat"><b>−95.2%</b><span>energy vs NPU</span></div></div>
+          <div class="work-foot">
+            <div class="links"><button class="primary-link" type="button" data-overview="blockpim">Overview</button><a href="https://caslab-yonsei.github.io/publications/cal26-skim/" target="_blank" rel="noopener">Project</a></div>
+            <ul class="tags"><li>Processing-in-Memory</li><li>Pruning</li><li>Sparse LLM</li></ul>
+          </div>
+        </div>
+      </article>
+      </div>
+      <p class="footnote">Numbers are the headline results reported in each paper. Click a figure for the full overview.</p>
     </section>
 
     <section class="section" id="list" aria-labelledby="list-h">
