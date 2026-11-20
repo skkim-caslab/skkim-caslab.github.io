@@ -40,12 +40,12 @@
     <a class="brand" href="index.html">Seulki Kim</a>
     <nav class="site-nav" aria-label="Sections">
       <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#work">Publications</a>
-      <a href="#news">News</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
+      <a href="#work">Publications</a>
+      <a href="#research">Research</a>
       <a href="#honors">Honors</a>
+      <a href="#news">News</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -71,33 +71,53 @@
       </div>
     </section>
 
-    <section class="section" id="research" aria-labelledby="research-h">
-      <div class="sec-head"><h2 id="research-h">Research</h2></div>
-      <div class="threads">
-        <article class="thread t-pim" id="focus-pim">
-          <p class="bank-tag">PIM</p>
-          <h3>Processing-in-memory for sparse LLMs</h3>
-          <p>Align pruning with the bank-level PIM datapath so sparse weights and KV caches run on the dense pipeline.</p>
-          <p class="bank-papers"><a href="#work-unipim">UniPIM</a> · <a href="#work-blockpim">BlockPIM</a> · <a href="publications.html#ndpool">NDPool</a></p>
-        </article>
-        <article class="thread t-search" id="focus-search">
-          <p class="bank-tag">Search</p>
-          <h3>In-memory vector search</h3>
-          <p>Encode vectors so nearest-neighbor search becomes shift-and-add streamed from DRAM banks, at billion scale.</p>
-          <p class="bank-papers"><a href="#work-sanns">S-ANNS</a> · <a href="publications.html#cabin">CABIN</a></p>
-        </article>
-        <article class="thread t-device" id="focus-device">
-          <p class="bank-tag">Device</p>
-          <h3>On-device LLM accelerators</h3>
-          <p>Manage the NPU scratchpad at runtime to fill idle memory bandwidth during on-device decoding.</p>
-          <p class="bank-papers"><a href="#work-smooth">SMOOTH</a></p>
-        </article>
-        <article class="thread t-system" id="focus-system">
-          <p class="bank-tag">System</p>
-          <h3>Efficient datacenter systems</h3>
-          <p>Shared LLM inference on CXL near-data processing, and energy-aware core management for cloud services.</p>
-          <p class="bank-papers"><a href="publications.html#ndpool">NDPool</a> · <a href="publications.html#ecocore">EcoCore</a></p>
-        </article>
+    <section class="section" id="experience" aria-labelledby="experience-h">
+      <div class="sec-head"><h2 id="experience-h">Experience</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><strong>Graduate Researcher</strong><span class="entry-date">Mar 2020 – Present</span></div>
+          <p class="entry-sub">Computer Architecture and Systems Lab (CASLAB) · Advisor: Prof. Daehoon Kim</p>
+          <p class="entry-sub">Yonsei University, Seoul (Sep 2024 – Present) · DGIST, Daegu (Mar 2020 – Aug 2024)</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><strong>Cloud Architect Intern</strong><span class="entry-date">Jul 2022 – Aug 2022</span></div>
+          <p class="entry-sub">LG CNS</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><strong>Industry Intern</strong><span class="entry-date">2019</span></div>
+          <p class="entry-sub">SYSOFT Co., Ltd. · Company-University Cooperation (CUop) Program, DGIST</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><strong>Undergraduate Research Intern</strong><span class="entry-date">2019</span></div>
+          <p class="entry-sub">Computer Architecture and Systems Lab (CASLAB), DGIST</p>
+          <p class="entry-sub">Data-Intensive Computing Systems Laboratory (Data Lab), DGIST</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><strong>Undergraduate Group Research Program (UGRP)</strong><span class="entry-date">2019</span></div>
+          <p class="entry-sub">Personalized AI for improving computer work efficiency · with Prof. Min-Soo Kim, DGIST</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><strong>World Friends ICT Volunteer</strong><span class="entry-date">2018</span></div>
+          <p class="entry-sub">Ghana</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-h">
+      <div class="sec-head"><h2 id="education-h">Education</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><strong>M.S.–Ph.D. Integrated Program, Electrical Engineering and Computer Science</strong><span class="entry-date">Mar 2020 – Present</span></div>
+          <p class="entry-sub">DGIST, Daegu · Advisor: Prof. Daehoon Kim</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><strong>B.S., School of Undergraduate Studies (Convergence Engineering)</strong><span class="entry-date">Mar 2016 – Feb 2020</span></div>
+          <p class="entry-sub">DGIST, Daegu</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><strong>Summer Session</strong><span class="entry-date">Summer 2017</span></div>
+          <p class="entry-sub">University of California, Berkeley</p>
+        </div>
       </div>
     </section>
 
@@ -160,81 +180,6 @@
       <p class="footnote">Headline results from each paper. Click a figure for the full overview.</p>
     </section>
 
-
-    <section class="section" id="news" aria-labelledby="news-h">
-      <div class="sec-head"><h2 id="news-h">News</h2></div>
-      <div class="timeline">
-        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#unipim">UniPIM</a> was accepted to <strong>HPCA 2027</strong>.</p></div>
-        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#sanns">S-ANNS</a> (co-first author) was accepted to <strong>IEEE CAL</strong>.</p></div>
-        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#smooth">SMOOTH</a> was accepted to <strong>ISCA 2026</strong>.</p></div>
-        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#blockpim">BlockPIM</a> was accepted to <strong>IEEE CAL</strong>.</p></div>
-        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#cabin">CABIN</a> and <a href="publications.html#ndpool">NDPool</a> were accepted to <strong>IEEE CAL</strong>.</p></div>
-        <div class="tl-row"><span class="tl-date">2025</span><p><a href="publications.html#ecocore">EcoCore</a> was accepted to <strong>MICRO 2025</strong>.</p></div>
-      </div>
-    </section>
-
-    <section class="section" id="experience" aria-labelledby="experience-h">
-      <div class="sec-head"><h2 id="experience-h">Experience</h2></div>
-      <div class="entries">
-        <div class="entry">
-          <div class="entry-head"><strong>Graduate Researcher</strong><span class="entry-date">Mar 2020 – Present</span></div>
-          <p class="entry-sub">Computer Architecture and Systems Lab (CASLAB) · Advisor: Prof. Daehoon Kim</p>
-          <p class="entry-sub">Yonsei University, Seoul (Sep 2024 – Present) · DGIST, Daegu (Mar 2020 – Aug 2024)</p>
-        </div>
-        <div class="entry">
-          <div class="entry-head"><strong>Cloud Architect Intern</strong><span class="entry-date">Jul 2022 – Aug 2022</span></div>
-          <p class="entry-sub">LG CNS</p>
-        </div>
-        <div class="entry">
-          <div class="entry-head"><strong>Industry Intern</strong><span class="entry-date">2019</span></div>
-          <p class="entry-sub">SYSOFT Co., Ltd. · Company-University Cooperation (CUop) Program, DGIST</p>
-        </div>
-        <div class="entry">
-          <div class="entry-head"><strong>Undergraduate Research Intern</strong><span class="entry-date">2019</span></div>
-          <p class="entry-sub">Computer Architecture and Systems Lab (CASLAB), DGIST</p>
-          <p class="entry-sub">Data-Intensive Computing Systems Laboratory (Data Lab), DGIST</p>
-        </div>
-        <div class="entry">
-          <div class="entry-head"><strong>Undergraduate Group Research Program (UGRP)</strong><span class="entry-date">2019</span></div>
-          <p class="entry-sub">Personalized AI for improving computer work efficiency · with Prof. Min-Soo Kim, DGIST</p>
-        </div>
-        <div class="entry">
-          <div class="entry-head"><strong>World Friends ICT Volunteer</strong><span class="entry-date">2018</span></div>
-          <p class="entry-sub">Ghana</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="education" aria-labelledby="education-h">
-      <div class="sec-head"><h2 id="education-h">Education</h2></div>
-      <div class="entries">
-        <div class="entry">
-          <div class="entry-head"><strong>M.S.–Ph.D. Integrated Program, Electrical Engineering and Computer Science</strong><span class="entry-date">Mar 2020 – Present</span></div>
-          <p class="entry-sub">DGIST, Daegu · Advisor: Prof. Daehoon Kim</p>
-        </div>
-        <div class="entry">
-          <div class="entry-head"><strong>B.S., School of Undergraduate Studies (Convergence Engineering)</strong><span class="entry-date">Mar 2016 – Feb 2020</span></div>
-          <p class="entry-sub">DGIST, Daegu</p>
-        </div>
-        <div class="entry">
-          <div class="entry-head"><strong>Summer Session</strong><span class="entry-date">Summer 2017</span></div>
-          <p class="entry-sub">University of California, Berkeley</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="honors" aria-labelledby="honors-h">
-      <div class="sec-head"><h2 id="honors-h">Honors &amp; Funding</h2></div>
-      <div class="lines">
-        <div class="entry-line"><span>DGIST Presidential Fellowship (DPF)</span><span class="entry-date">Mar 2020 – Feb 2025</span></div>
-        <div class="entry-line"><span>Government Scholarship (Graduate), DGIST</span><span class="entry-date">Mar 2020 – Present</span></div>
-        <div class="entry-line"><span>Government Scholarship (Undergraduate), DGIST</span><span class="entry-date">Mar 2016 – Feb 2020</span></div>
-        <div class="entry-line"><span>Academic Excellence Scholarship, DGIST</span><span class="entry-date">Mar 2019</span></div>
-        <div class="entry-line"><span>Excellence Award &amp; Bronze Prize, International Student Creative Car Competition</span><span class="entry-date">May 2018</span></div>
-        <div class="entry-line"><span>Grand Prize, DGIST Technology Startup Competition</span><span class="entry-date">Nov 2017</span></div>
-      </div>
-    </section>
-
     <section class="section" id="patents" aria-labelledby="patents-h">
       <div class="sec-head"><h2 id="patents-h">Patents</h2></div>
       <div class="entries">
@@ -243,6 +188,36 @@
           <p class="entry-sub">Bokyeong Kim, Daehoon Kim, <span class="me">Seulki Kim</span></p>
           <p class="entry-sub">KR Patent Application 10-2025-0032138 · Samsung Electronics &amp; DGIST</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-h">
+      <div class="sec-head"><h2 id="research-h">Research</h2></div>
+      <div class="threads">
+        <article class="thread t-pim" id="focus-pim">
+          <p class="bank-tag">PIM</p>
+          <h3>Processing-in-memory for sparse LLMs</h3>
+          <p>Align pruning with the bank-level PIM datapath so sparse weights and KV caches run on the dense pipeline.</p>
+          <p class="bank-papers"><a href="#work-unipim">UniPIM</a> · <a href="#work-blockpim">BlockPIM</a> · <a href="publications.html#ndpool">NDPool</a></p>
+        </article>
+        <article class="thread t-search" id="focus-search">
+          <p class="bank-tag">Search</p>
+          <h3>In-memory vector search</h3>
+          <p>Encode vectors so nearest-neighbor search becomes shift-and-add streamed from DRAM banks, at billion scale.</p>
+          <p class="bank-papers"><a href="#work-sanns">S-ANNS</a> · <a href="publications.html#cabin">CABIN</a></p>
+        </article>
+        <article class="thread t-device" id="focus-device">
+          <p class="bank-tag">Device</p>
+          <h3>On-device LLM accelerators</h3>
+          <p>Manage the NPU scratchpad at runtime to fill idle memory bandwidth during on-device decoding.</p>
+          <p class="bank-papers"><a href="#work-smooth">SMOOTH</a></p>
+        </article>
+        <article class="thread t-system" id="focus-system">
+          <p class="bank-tag">System</p>
+          <h3>Efficient datacenter systems</h3>
+          <p>Shared LLM inference on CXL near-data processing, and energy-aware core management for cloud services.</p>
+          <p class="bank-papers"><a href="publications.html#ndpool">NDPool</a> · <a href="publications.html#ecocore">EcoCore</a></p>
+        </article>
       </div>
     </section>
 
@@ -259,6 +234,18 @@
       </div>
     </section>
 
+    <section class="section" id="honors" aria-labelledby="honors-h">
+      <div class="sec-head"><h2 id="honors-h">Honors &amp; Funding</h2></div>
+      <div class="lines">
+        <div class="entry-line"><span>DGIST Presidential Fellowship (DPF)</span><span class="entry-date">Mar 2020 – Feb 2025</span></div>
+        <div class="entry-line"><span>Government Scholarship (Graduate), DGIST</span><span class="entry-date">Mar 2020 – Present</span></div>
+        <div class="entry-line"><span>Government Scholarship (Undergraduate), DGIST</span><span class="entry-date">Mar 2016 – Feb 2020</span></div>
+        <div class="entry-line"><span>Academic Excellence Scholarship, DGIST</span><span class="entry-date">Mar 2019</span></div>
+        <div class="entry-line"><span>Excellence Award &amp; Bronze Prize, International Student Creative Car Competition</span><span class="entry-date">May 2018</span></div>
+        <div class="entry-line"><span>Grand Prize, DGIST Technology Startup Competition</span><span class="entry-date">Nov 2017</span></div>
+      </div>
+    </section>
+
     <section class="section" id="skills" aria-labelledby="skills-h">
       <div class="sec-head"><h2 id="skills-h">Technical Skills</h2></div>
       <dl class="spec">
@@ -269,6 +256,17 @@
       </dl>
     </section>
 
+    <section class="section" id="news" aria-labelledby="news-h">
+      <div class="sec-head"><h2 id="news-h">News</h2></div>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#unipim">UniPIM</a> was accepted to <strong>HPCA 2027</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#sanns">S-ANNS</a> (co-first author) was accepted to <strong>IEEE CAL</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#smooth">SMOOTH</a> was accepted to <strong>ISCA 2026</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#blockpim">BlockPIM</a> was accepted to <strong>IEEE CAL</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="publications.html#cabin">CABIN</a> and <a href="publications.html#ndpool">NDPool</a> were accepted to <strong>IEEE CAL</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2025</span><p><a href="publications.html#ecocore">EcoCore</a> was accepted to <strong>MICRO 2025</strong>.</p></div>
+      </div>
+    </section>
 
     <section class="section" id="contact" aria-labelledby="contact-h">
       <div class="sec-head"><h2 id="contact-h">Contact</h2></div>
