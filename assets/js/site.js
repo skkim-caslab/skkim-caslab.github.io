@@ -1,4 +1,4 @@
-/* Seulki Kim, site behavior: sticky header, bar charts, paper overviews, filters. */
+/* Seulki Kim, site behavior: section highlight, paper overviews, filters. */
 (function () {
   "use strict";
 
@@ -54,25 +54,20 @@
     }
   };
 
-  // Sticky header shadow.
-  var header = document.querySelector(".site-header");
-  if (header) {
-    var onScroll = function () { header.classList.toggle("is-scrolled", window.scrollY > 8); };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
-
-  // Animate bar charts when they scroll into view.
-  var charts = document.querySelectorAll(".chart");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
+  // Highlight the current section in the profile nav.
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.profile-nav a[href^="#"]'));
+  if (navLinks.length && "IntersectionObserver" in window) {
+    var byId = {};
+    navLinks.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+        if (!e.isIntersecting) return;
+        navLinks.forEach(function (a) { a.classList.remove("is-active"); });
+        var a = byId[e.target.id];
+        if (a) a.classList.add("is-active");
       });
-    }, { threshold: 0.3 });
-    charts.forEach(function (c) { io.observe(c); });
-  } else {
-    charts.forEach(function (c) { c.classList.add("is-visible"); });
+    }, { rootMargin: "-30% 0px -60% 0px" });
+    Object.keys(byId).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
   }
 
   // Overview dialog.
@@ -97,7 +92,7 @@
     dialog.innerHTML =
       '<div class="overview-inner">' +
         '<div class="overview-head"><div>' +
-          '<div class="badges"><span class="venue-badge">' + esc(p.venue) + "</span></div>" +
+          '<p class="meta"><span class="venue">' + esc(p.venue) + "</span></p>" +
           '<h2 id="overview-title">' + esc(p.short) + "</h2>" +
         "</div>" +
         '<button class="overview-close" type="button" aria-label="Close">×</button></div>' +
@@ -115,7 +110,7 @@
   });
 
   // Publication filters.
-  var filterBar = document.querySelector(".pub-filters");
+  var filterBar = document.querySelector(".filters");
   if (filterBar) {
     filterBar.addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-filter]");
@@ -127,7 +122,10 @@
         p.classList.toggle("is-hidden", !show);
       });
       document.querySelectorAll(".pub-year").forEach(function (y) {
-        y.classList.toggle("is-empty", !y.querySelector(".pub:not(.is-hidden)"));
+        var visible = y.querySelectorAll(".pub:not(.is-hidden)");
+        y.classList.toggle("is-empty", !visible.length);
+        y.querySelectorAll(".pub").forEach(function (p) { p.classList.remove("is-last"); });
+        if (visible.length) visible[visible.length - 1].classList.add("is-last");
       });
     });
   }
