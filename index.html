@@ -89,7 +89,7 @@
       <article class="work t-pim" id="work-unipim">
         <button class="work-figure" type="button" aria-label="UniPIM overview" data-overview="unipim"><img src="assets/images/papers/unipim.svg" alt="Index-based sparse PIM gives each DRAM bank different work and large index metadata; UniPIM uses a small bitmap and 32-byte blocks with equal work per bank." width="760" height="400" loading="lazy"></button>
         <div>
-          <p class="meta"><span class="venue">HPCA</span><span>2027 · to appear</span><span>First author</span></p>
+          <p class="meta"><span class="venue">HPCA</span><span class="tier tier-top">Top-tier</span><span>2027 · to appear</span><span>First author</span></p>
           <h3 class="work-title">UniPIM</h3>
           <p class="work-sub">Hardware-Aligned Sparse LLM Inference for All-Bank Processing-in-Memory</p>
           <p class="work-teaser">Commercial PIM cannot skip zeros, so UniPIM makes sparsity look like the dense, bank-balanced work it already runs.</p>
@@ -104,7 +104,7 @@
       <article class="work t-device" id="work-smooth">
         <button class="work-figure" type="button" aria-label="SMOOTH overview" data-overview="smooth"><img src="assets/images/papers/smooth.svg" alt="Bandwidth timelines: static tiling leaves bandwidth idle during compute phases; SMOOTH preloads weights into the idle windows and finishes decoding earlier." width="760" height="400" loading="lazy"></button>
         <div>
-          <p class="meta"><span class="venue">ISCA</span><span>2026</span><span>First author</span></p>
+          <p class="meta"><span class="venue">ISCA</span><span class="tier tier-top">Top-tier</span><span>2026</span><span>First author</span></p>
           <h3 class="work-title">SMOOTH</h3>
           <p class="work-sub">Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference</p>
           <p class="work-teaser">Decoding leaves DRAM bandwidth idle in short bursts; SMOOTH fills them by managing the NPU scratchpad at runtime.</p>
@@ -119,7 +119,7 @@
       <article class="work t-search" id="work-sanns">
         <button class="work-figure" type="button" aria-label="S-ANNS overview" data-overview="sanns"><img src="assets/images/papers/sanns.svg" alt="A float32 value multiplied in an FP32 MAC versus the same value stored as signed powers of two and computed with shifts and an adder." width="760" height="400" loading="lazy"></button>
         <div>
-          <p class="meta"><span class="venue">IEEE CAL</span><span>2026</span><span>Co-first author</span></p>
+          <p class="meta"><span class="venue">IEEE CAL</span><span class="tier tier-sci">SCI</span><span>2026</span><span>Co-first author</span></p>
           <h3 class="work-title">S-ANNS</h3>
           <p class="work-sub">Energy-Efficient Approximate Nearest Neighbor Search via Shift-Based PIM Architecture</p>
           <p class="work-teaser">Database vectors never change, so S-ANNS does the multiplier’s recoding offline and the PIM only shifts and adds.</p>
@@ -133,7 +133,7 @@
       <article class="work t-pim" id="work-blockpim">
         <button class="work-figure" type="button" aria-label="BlockPIM overview" data-overview="blockpim"><img src="assets/images/papers/blockpim.svg" alt="Unstructured pruning with CSR indices versus BlockPIM's 32-byte block pruning with a one-bit-per-block bitmap feeding a dense MAC pipeline." width="760" height="400" loading="lazy"></button>
         <div>
-          <p class="meta"><span class="venue">IEEE CAL</span><span>2026</span><span>First author</span></p>
+          <p class="meta"><span class="venue">IEEE CAL</span><span class="tier tier-sci">SCI</span><span>2026</span><span>First author</span></p>
           <h3 class="work-title">BlockPIM</h3>
           <p class="work-sub">Enabling Sparse LLM Inference on Dense PIM Architectures</p>
           <p class="work-teaser">Pruning aligned to the PIM’s 32-byte I/O lets sparse LLMs run on the dense pipeline with only a bitmap as metadata.</p>
@@ -145,7 +145,7 @@
         </div>
       </article>
       </div>
-      <p class="footnote">HPCA and ISCA are top-tier conferences in computer architecture. Numbers are the headline results reported in each paper. Click a figure for the full overview.</p>
+      <p class="footnote">Numbers are the headline results reported in each paper. Click a figure for the full overview.</p>
     </section>
 
     <section class="section" id="research" aria-labelledby="research-h">
