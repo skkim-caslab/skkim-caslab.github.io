@@ -9,171 +9,150 @@
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">Seulki Kim</a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html#research">Research</a>
-      <a href="publications.html" aria-current="page">Publications &amp; News</a>
-      <a href="index.html#contact">Contact</a>
+<div class="layout">
+  <aside class="profile" aria-label="Profile">
+    <div class="profile-photo"><img src="assets/images/profile.jpg" alt="Seulki Kim" width="746" height="960"></div>
+    <div>
+      <p class="profile-name"><a href="index.html">Seulki Kim</a><span class="profile-ko" lang="ko">김슬기</span></p>
+      <p class="profile-role">Ph.D. Student, DGIST<br>Member of <a href="https://caslab-yonsei.github.io/" target="_blank" rel="noopener">CASLAB@Yonsei</a></p>
+    </div>
+    <nav class="profile-nav" aria-label="Sections">
+      <a href="index.html#about"><span>01</span>About</a>
+      <a href="index.html#work"><span>02</span>Selected work</a>
+      <a href="index.html#research"><span>03</span>Research</a>
+      <a href="index.html#news"><span>04</span>News</a>
+      <a href="index.html#background"><span>05</span>Background</a>
+      <a href="index.html#contact"><span>06</span>Contact</a>
+      <a href="publications.html" aria-current="page"><span>→</span>All publications</a>
     </nav>
-  </div>
-</header>
-
-<main id="main" class="container">
-  <section class="publication-page-news" id="news" aria-labelledby="news-title">
-    <div class="page-hero">
-      <h1 id="news-title">News</h1>
+    <div class="profile-links">
+      <a href="mailto:skkim@dgist.ac.kr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>skkim@dgist.ac.kr</a>
+      <a href="https://github.com/skkim-caslab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>
+      <a href="https://caslab-yonsei.github.io/members/seulki-kim/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>Lab profile</a>
+      <!-- <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a> -->
+      <!-- <a href="https://www.linkedin.com/in/YOUR_ID/" target="_blank" rel="noopener">LinkedIn</a> -->
+      <!-- <a href="assets/cv/seulki-kim-cv.pdf">CV</a> -->
     </div>
-    <div class="news-stream">
-      <div class="news-row"><span class="news-year">2026</span><p><a href="#unipim"><strong>UniPIM</strong></a> was accepted to <strong class="venue-inline">HPCA 2027</strong>.</p></div>
-      <div class="news-row"><span class="news-year">2026</span><p><a href="#sanns"><strong>S-ANNS</strong></a> (co-first author) was accepted to <strong class="venue-inline">IEEE CAL</strong>.</p></div>
-      <div class="news-row"><span class="news-year">2026</span><p><a href="#smooth"><strong>SMOOTH</strong></a> was accepted to <strong class="venue-inline">ISCA 2026</strong>.</p></div>
-      <div class="news-row"><span class="news-year">2026</span><p><a href="#blockpim"><strong>BlockPIM</strong></a> was accepted to <strong class="venue-inline">IEEE CAL</strong>.</p></div>
-      <div class="news-row"><span class="news-year">2026</span><p><a href="#cabin"><strong>CABIN</strong></a> and <a href="#ndpool"><strong>NDPool</strong></a> were accepted to <strong class="venue-inline">IEEE CAL</strong>.</p></div>
-      <div class="news-row"><span class="news-year">2025</span><p><a href="#ecocore"><strong>EcoCore</strong></a> was accepted to <strong class="venue-inline">MICRO 2025</strong>.</p></div>
-    </div>
-  </section>
+  </aside>
 
-  <section class="publication-page-list" id="publications" aria-labelledby="publications-title">
-    <div class="page-hero">
-      <h2 class="section-title" id="publications-title">Publications</h2>
-      <p>Processing-in-memory, on-device LLM accelerators, in-memory vector search, and efficient datacenter systems.</p>
-    </div>
+  <main class="content" id="main">
+    <section class="section page-top" aria-labelledby="page-h">
+      <h1 class="page-title" id="page-h">Publications</h1>
+      <p class="page-intro">Processing-in-memory, on-device LLM accelerators, in-memory vector search, and efficient datacenter systems. Click a title for an overview.</p>
+    </section>
 
-    <div class="pub-filters" role="group" aria-label="Filter publications">
-      <button type="button" data-filter="all" aria-pressed="true">All</button>
-      <button type="button" data-filter="first" aria-pressed="false">First author</button>
-      <button type="button" class="t-pim" data-filter="t-pim" aria-pressed="false">Processing-in-Memory</button>
-      <button type="button" class="t-search" data-filter="t-search" aria-pressed="false">Vector Search</button>
-      <button type="button" class="t-device" data-filter="t-device" aria-pressed="false">On-Device LLM</button>
-      <button type="button" class="t-system" data-filter="t-system" aria-pressed="false">Datacenter Systems</button>
-    </div>
+    <section class="section" id="list" aria-labelledby="list-h">
+      <div class="sec-head"><span class="sec-num">01</span><h2 id="list-h">All papers</h2></div>
+      <div class="filters" role="group" aria-label="Filter publications">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="first" aria-pressed="false">First author</button>
+        <button type="button" class="t-pim" data-filter="t-pim" aria-pressed="false">Processing-in-Memory</button>
+        <button type="button" class="t-search" data-filter="t-search" aria-pressed="false">Vector Search</button>
+        <button type="button" class="t-device" data-filter="t-device" aria-pressed="false">On-Device LLM</button>
+        <button type="button" class="t-system" data-filter="t-system" aria-pressed="false">Datacenter Systems</button>
+      </div>
 
-    <section class="pub-year" aria-labelledby="year-2027">
-      <h2 class="pub-year-label" id="year-2027">2027</h2>
-      <div class="pub-year-list">
+      <section class="pub-year" aria-labelledby="year-2027">
+        <h3 class="pub-year-label" id="year-2027">2027</h3>
+        <div class="pub-year-list">
         <article class="pub t-pim" id="unipim" data-first>
-          <div class="badges"><span class="venue-badge">HPCA</span><span class="badge-year">2027, to appear</span><span class="role-badge">First author</span></div>
+          <p class="meta"><span class="venue">HPCA</span><span>2027 · to appear</span><span>First author</span></p>
           <h3 class="pub-title"><button type="button" data-overview="unipim">UniPIM: Hardware-Aligned Sparse LLM Inference for All-Bank Processing-in-Memory</button></h3>
           <p class="pub-authors"><strong>Seulki Kim</strong>, Yewon Jang, Yunhyeong Jeon, Kyeonghyeon Ryu, Daehoon Kim</p>
           <p class="pub-venue">IEEE International Symposium on High-Performance Computer Architecture (HPCA), 2027</p>
           <p class="pub-summary">Bitmap-based block layout and all-bank-balanced pruning let commercial bank-level PIM benefit from sparse weights and KV caches without index metadata or extra scheduling hardware.</p>
-          <p class="key-result">Up to 1.29× decode throughput over quantized dense PIM and 2.1× over SparsePIM</p>
-          <ul class="tags"><li>Processing-in-Memory</li><li>Sparse LLM</li><li>KV Cache</li></ul>
-          <div class="actions">
-            <button class="toggle" type="button" data-overview="unipim">Overview</button>
-            <a href="https://caslab-yonsei.github.io/publications/hpca27-skim/" target="_blank" rel="noopener">Project</a>
-          </div>
+          <p class="pub-result">Up to 1.29× decode throughput over quantized dense PIM and 2.1× over SparsePIM</p>
+          <div class="work-foot"><div class="links"><button class="primary-link" type="button" data-overview="unipim">Overview</button><a href="https://caslab-yonsei.github.io/publications/hpca27-skim/" target="_blank" rel="noopener">Project</a></div><ul class="tags"><li>Processing-in-Memory</li><li>Sparse LLM</li><li>KV Cache</li></ul></div>
         </article>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section class="pub-year" aria-labelledby="year-2026">
-      <h2 class="pub-year-label" id="year-2026">2026</h2>
-      <div class="pub-year-list">
+      <section class="pub-year" aria-labelledby="year-2026">
+        <h3 class="pub-year-label" id="year-2026">2026</h3>
+        <div class="pub-year-list">
         <article class="pub t-device" id="smooth" data-first>
-          <div class="badges"><span class="venue-badge">ISCA</span><span class="badge-year">2026</span><span class="role-badge">First author</span></div>
+          <p class="meta"><span class="venue">ISCA</span><span>2026</span><span>First author</span></p>
           <h3 class="pub-title"><button type="button" data-overview="smooth">SMOOTH: Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference</button></h3>
           <p class="pub-authors"><strong>Seulki Kim</strong>, Bokyeong Kim, Kyeonghyeon Ryu, Yeji Jung, Hwanjun Lee, Sungju Kim, Yunhyeong Jeon, Daehoon Kim</p>
           <p class="pub-venue">IEEE/ACM International Symposium on Computer Architecture (ISCA), 2026</p>
           <p class="pub-summary">Hardware-assisted, block-level scratchpad management that preloads weights into idle DRAM bandwidth and reclaims dead buffers early on mobile NPUs.</p>
-          <p class="key-result">Up to 59.2% lower TTFT and 73.0% lower TTLT</p>
-          <ul class="tags"><li>NPU</li><li>On-Device LLM</li><li>Scratchpad Memory</li></ul>
-          <div class="actions">
-            <button class="toggle" type="button" data-overview="smooth">Overview</button>
-            <a href="https://doi.org/10.1109/ISCA66397.2026.00057" target="_blank" rel="noopener">DOI</a>
-            <a href="https://caslab-yonsei.github.io/publications/isca26-skim/" target="_blank" rel="noopener">Project</a>
-          </div>
+          <p class="pub-result">Up to 59.2% lower TTFT and 73.0% lower TTLT</p>
+          <div class="work-foot"><div class="links"><button class="primary-link" type="button" data-overview="smooth">Overview</button><a href="https://doi.org/10.1109/ISCA66397.2026.00057" target="_blank" rel="noopener">DOI</a><a href="https://caslab-yonsei.github.io/publications/isca26-skim/" target="_blank" rel="noopener">Project</a></div><ul class="tags"><li>NPU</li><li>On-Device LLM</li><li>Scratchpad Memory</li></ul></div>
         </article>
-
         <article class="pub t-search" id="sanns" data-first>
-          <div class="badges"><span class="venue-badge">IEEE CAL</span><span class="badge-year">2026</span><span class="role-badge">Co-first author</span></div>
+          <p class="meta"><span class="venue">IEEE CAL</span><span>2026</span><span>Co-first author</span></p>
           <h3 class="pub-title"><button type="button" data-overview="sanns">S-ANNS: Energy-Efficient Approximate Nearest Neighbor Search via Shift-Based PIM Architecture</button></h3>
           <p class="pub-authors"><strong>Seulki Kim*</strong>, Yewon Jang*, Minho Kim, Daehoon Kim <span class="muted-link">(* equal contribution)</span></p>
           <p class="pub-venue">IEEE Computer Architecture Letters (CAL), 2026</p>
           <p class="pub-summary">Power-of-Two quantization stored in DRAM turns ANNS distance computation into shift-and-add on bank-level PIM, without multipliers or lookup tables.</p>
-          <p class="key-result">1.4–1.9× search throughput at 0.3–0.7× the footprint</p>
-          <ul class="tags"><li>Vector Search</li><li>Processing-in-Memory</li><li>Quantization</li></ul>
-          <div class="actions">
-            <button class="toggle" type="button" data-overview="sanns">Overview</button>
-            <a href="https://caslab-yonsei.github.io/publications/cal26-2-skim/" target="_blank" rel="noopener">Project</a>
-          </div>
+          <p class="pub-result">1.4–1.9× search throughput at 0.3–0.7× the footprint</p>
+          <div class="work-foot"><div class="links"><button class="primary-link" type="button" data-overview="sanns">Overview</button><a href="https://caslab-yonsei.github.io/publications/cal26-2-skim/" target="_blank" rel="noopener">Project</a></div><ul class="tags"><li>Vector Search</li><li>Processing-in-Memory</li><li>Quantization</li></ul></div>
         </article>
-
         <article class="pub t-pim" id="blockpim" data-first>
-          <div class="badges"><span class="venue-badge">IEEE CAL</span><span class="badge-year">2026</span><span class="role-badge">First author</span></div>
+          <p class="meta"><span class="venue">IEEE CAL</span><span>2026</span><span>First author</span></p>
           <h3 class="pub-title"><button type="button" data-overview="blockpim">BlockPIM: Enabling Sparse LLM Inference on Dense PIM Architectures</button></h3>
           <p class="pub-authors"><strong>Seulki Kim</strong>, Yewon Jang, Yunhyeong Jeon, Kyeonghyeon Ryu, Daehoon Kim</p>
           <p class="pub-venue">IEEE Computer Architecture Letters (CAL), 2026</p>
           <p class="pub-summary">Hardware-aligned coarse-grained pruning with compact bitmaps lets sparse LLMs execute on standard dense PIM pipelines.</p>
-          <p class="key-result">Up to 8.0× over an NPU and 3.6× over sparse PIM</p>
-          <ul class="tags"><li>Processing-in-Memory</li><li>Pruning</li><li>Sparse LLM</li></ul>
-          <div class="actions">
-            <button class="toggle" type="button" data-overview="blockpim">Overview</button>
-            <a href="https://caslab-yonsei.github.io/publications/cal26-skim/" target="_blank" rel="noopener">Project</a>
-          </div>
+          <p class="pub-result">Up to 8.0× over an NPU and 3.6× over sparse PIM</p>
+          <div class="work-foot"><div class="links"><button class="primary-link" type="button" data-overview="blockpim">Overview</button><a href="https://caslab-yonsei.github.io/publications/cal26-skim/" target="_blank" rel="noopener">Project</a></div><ul class="tags"><li>Processing-in-Memory</li><li>Pruning</li><li>Sparse LLM</li></ul></div>
         </article>
-
         <article class="pub t-search" id="cabin">
-          <div class="badges"><span class="venue-badge">IEEE CAL</span><span class="badge-year">2026</span></div>
+          <p class="meta"><span class="venue">IEEE CAL</span><span>2026</span></p>
           <h3 class="pub-title">CABIN: Cluster-Aware Hybrid In-Memory Execution for Accelerating Billion-Scale ANNS</h3>
           <p class="pub-authors">Minho Kim, Yunhyeong Jeon, <strong>Seulki Kim</strong>, Daehoon Kim</p>
           <p class="pub-venue">IEEE Computer Architecture Letters (CAL), 2026</p>
-          <ul class="tags"><li>Vector Search</li><li>In-Memory Execution</li></ul>
-          <div class="actions">
-            <a href="https://caslab-yonsei.github.io/publications/cal26-mkim/" target="_blank" rel="noopener">Project</a>
-          </div>
+          <div class="work-foot"><div class="links"><a href="https://caslab-yonsei.github.io/publications/cal26-mkim/" target="_blank" rel="noopener">Project</a></div><ul class="tags"><li>Vector Search</li><li>In-Memory Execution</li></ul></div>
         </article>
-
         <article class="pub t-system" id="ndpool">
-          <div class="badges"><span class="venue-badge">IEEE CAL</span><span class="badge-year">2026</span></div>
+          <p class="meta"><span class="venue">IEEE CAL</span><span>2026</span></p>
           <h3 class="pub-title">NDPool: Correctness-Preserving Shared Execution for Efficient LLM Inference on CXL-NDP Systems</h3>
           <p class="pub-authors">Yeji Jung, Hwanjun Lee, Sungju Kim, <strong>Seulki Kim</strong>, Yunhyeong Jeon, Daehoon Kim</p>
           <p class="pub-venue">IEEE Computer Architecture Letters (CAL), 2026</p>
-          <ul class="tags"><li>CXL</li><li>Near-Data Processing</li><li>LLM Inference</li></ul>
-          <div class="actions">
-            <a href="https://doi.org/10.1109/LCA.2026.3702973" target="_blank" rel="noopener">DOI</a>
-            <a href="https://caslab-yonsei.github.io/publications/cal26-yjung/" target="_blank" rel="noopener">Project</a>
-          </div>
+          <div class="work-foot"><div class="links"><a href="https://doi.org/10.1109/LCA.2026.3702973" target="_blank" rel="noopener">DOI</a><a href="https://caslab-yonsei.github.io/publications/cal26-yjung/" target="_blank" rel="noopener">Project</a></div><ul class="tags"><li>CXL</li><li>Near-Data Processing</li><li>LLM Inference</li></ul></div>
         </article>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section class="pub-year" aria-labelledby="year-2025">
-      <h2 class="pub-year-label" id="year-2025">2025</h2>
-      <div class="pub-year-list">
+      <section class="pub-year" aria-labelledby="year-2025">
+        <h3 class="pub-year-label" id="year-2025">2025</h3>
+        <div class="pub-year-list">
         <article class="pub t-system" id="ecocore">
-          <div class="badges"><span class="venue-badge">MICRO</span><span class="badge-year">2025</span></div>
+          <p class="meta"><span class="venue">MICRO</span><span>2025</span></p>
           <h3 class="pub-title"><button type="button" data-overview="ecocore">EcoCore: Dynamic Core Management for Improving Energy Efficiency in Latency-Critical Applications</button></h3>
           <p class="pub-authors">Gyeongseo Park, Minho Kim, Ki-Dong Kang, Yunhyeong Jeon, <strong>Seulki Kim</strong>, Daehoon Kim</p>
           <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO), 2025</p>
           <p class="pub-summary">Joint core allocation for application threads and network packet processing, with adaptive packet-processing intervals, to save energy without SLO violations.</p>
-          <p class="key-result">11.7% lower energy on average, up to 20.3%</p>
-          <ul class="tags"><li>Power Management</li><li>Latency-Critical Workloads</li><li>Cloud</li></ul>
-          <div class="actions">
-            <button class="toggle" type="button" data-overview="ecocore">Overview</button>
-            <a href="https://doi.org/10.1145/3725843.3756021" target="_blank" rel="noopener">DOI</a>
-            <a href="https://caslab-yonsei.github.io/publications/micro25-gpark/" target="_blank" rel="noopener">Project</a>
-          </div>
+          <p class="pub-result">11.7% lower energy on average, up to 20.3%</p>
+          <div class="work-foot"><div class="links"><button class="primary-link" type="button" data-overview="ecocore">Overview</button><a href="https://doi.org/10.1145/3725843.3756021" target="_blank" rel="noopener">DOI</a><a href="https://caslab-yonsei.github.io/publications/micro25-gpark/" target="_blank" rel="noopener">Project</a></div><ul class="tags"><li>Power Management</li><li>Latency-Critical Workloads</li><li>Cloud</li></ul></div>
         </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="section" id="news" aria-labelledby="news-h">
+      <div class="sec-head"><span class="sec-num">02</span><h2 id="news-h">News</h2></div>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="#unipim">UniPIM</a> was accepted to <strong>HPCA 2027</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="#sanns">S-ANNS</a> (co-first author) was accepted to <strong>IEEE CAL</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="#smooth">SMOOTH</a> was accepted to <strong>ISCA 2026</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="#blockpim">BlockPIM</a> was accepted to <strong>IEEE CAL</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2026</span><p><a href="#cabin">CABIN</a> and <a href="#ndpool">NDPool</a> were accepted to <strong>IEEE CAL</strong>.</p></div>
+        <div class="tl-row"><span class="tl-date">2025</span><p><a href="#ecocore">EcoCore</a> was accepted to <strong>MICRO 2025</strong>.</p></div>
       </div>
     </section>
-  </section>
-</main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <span>© 2026 Seulki Kim</span>
-    <span>Updated <time datetime="2026-11">November 2026</time></span>
-  </div>
-</footer>
+    <footer class="site-footer">
+      <span>© 2026 Seulki Kim</span>
+      <span>Updated <time datetime="2026-11">November 2026</time></span>
+    </footer>
+  </main>
+</div>
 
 <script src="assets/js/site.js"></script>
 </body>
