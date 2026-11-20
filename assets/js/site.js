@@ -145,4 +145,13 @@
       });
     });
   }
+
+  // Links from the home list open this page at a paper; make sure we land there
+  // even if the browser skipped the initial fragment scroll.
+  if (location.hash.length > 1) {
+    window.addEventListener("load", function () {
+      var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target && window.scrollY === 0) target.scrollIntoView();
+    });
+  }
 })();
