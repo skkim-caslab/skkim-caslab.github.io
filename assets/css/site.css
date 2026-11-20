@@ -199,6 +199,7 @@ button { font: inherit; color: inherit; }
 
 .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
 .sub-head { font: 500 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+.sub-head-gap { margin-top: 36px; }
 .cols .tl-row { grid-template-columns: 96px minmax(0, 1fr); font-size: 14.5px; }
 
 .spec { display: grid; border-top: 1px solid var(--line); margin: 0; }
@@ -311,7 +312,8 @@ button { font: inherit; color: inherit; }
   .stat + .stat { padding-left: 10px; }
   .stat b { font-size: 18px; }
   .stat span { font-size: 12px; }
-  .tl-row, .cols .tl-row { grid-template-columns: 1fr; gap: 2px; }
+  .tl-row, .sub-head-gap { margin-top: 36px; }
+.cols .tl-row { grid-template-columns: 1fr; gap: 2px; }
   .spec div { grid-template-columns: 1fr; gap: 2px; }
   .stack-table, .stack-table tbody, .stack-table tr, .stack-table th, .stack-table td, .stack-table td:last-child { display: block; width: auto; }
   .stack-table tr { border-top: 1px solid var(--line); padding: 10px 0; }
