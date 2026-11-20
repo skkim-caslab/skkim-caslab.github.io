@@ -14,40 +14,30 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="layout">
-  <aside class="profile" aria-label="Profile">
-    <div class="profile-photo"><img src="assets/images/profile.jpg" alt="Seulki Kim" width="746" height="960"></div>
-    <div>
-      <p class="profile-name"><a href="index.html">Seulki Kim</a><span class="profile-ko" lang="ko">김슬기</span></p>
-      <p class="profile-role">Ph.D. Student, DGIST<br>Member of <a href="https://caslab-yonsei.github.io/" target="_blank" rel="noopener">CASLAB@Yonsei</a></p>
-    </div>
-    <nav class="profile-nav" aria-label="Sections">
-      <a href="index.html#about"><span>01</span>About</a>
-      <a href="index.html#research"><span>02</span>Research</a>
-      <a href="index.html#work"><span>03</span>Selected work</a>
-      <a href="index.html#news"><span>04</span>News</a>
-      <a href="index.html#background"><span>05</span>Background</a>
-      <a href="index.html#contact"><span>06</span>Contact</a>
-      <a href="publications.html" aria-current="page"><span>→</span>All publications</a>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html">Seulki Kim</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
+      <a href="publications.html" aria-current="page">Publications</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#honors">Honors</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
-    <div class="profile-links">
-      <a href="assets/cv/seulki-kim-cv.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>CV (PDF)</a>
-      <a href="mailto:skkim@dgist.ac.kr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>skkim@dgist.ac.kr</a>
-      <a href="https://github.com/skkim-caslab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>
-      <a href="https://caslab-yonsei.github.io/members/seulki-kim/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>Lab profile</a>
-      <!-- <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a> -->
-      <!-- <a href="https://www.linkedin.com/in/YOUR_ID/" target="_blank" rel="noopener">LinkedIn</a> -->
-    </div>
-  </aside>
+  </div>
+</header>
 
-  <main class="content" id="main">
+<main class="content" id="main">
     <section class="section page-top" aria-labelledby="page-h">
       <h1 class="page-title" id="page-h">Publications</h1>
       <p class="page-intro">Processing-in-memory, on-device LLM accelerators, in-memory vector search, and efficient datacenter systems. Click a title for an overview.</p>
     </section>
 
     <section class="section" id="list" aria-labelledby="list-h">
-      <div class="sec-head"><span class="sec-num">01</span><h2 id="list-h">All papers</h2></div>
+      <div class="sec-head"><h2 id="list-h">All papers</h2></div>
       <div class="filters" role="group" aria-label="Filter publications">
         <button type="button" data-filter="all" aria-pressed="true">All</button>
         <button type="button" data-filter="first" aria-pressed="false">First author</button>
@@ -136,7 +126,7 @@
     </section>
 
     <section class="section" id="news" aria-labelledby="news-h">
-      <div class="sec-head"><span class="sec-num">02</span><h2 id="news-h">News</h2></div>
+      <div class="sec-head"><h2 id="news-h">News</h2></div>
       <div class="timeline">
         <div class="tl-row"><span class="tl-date">2026</span><p><a href="#unipim">UniPIM</a> was accepted to <strong>HPCA 2027</strong>.</p></div>
         <div class="tl-row"><span class="tl-date">2026</span><p><a href="#sanns">S-ANNS</a> (co-first author) was accepted to <strong>IEEE CAL</strong>.</p></div>
@@ -151,8 +141,7 @@
       <span>© 2026 Seulki Kim</span>
       <span>Updated <time datetime="2026-11">November 2026</time></span>
     </footer>
-  </main>
-</div>
+</main>
 
 <script src="assets/js/site.js"></script>
 </body>
